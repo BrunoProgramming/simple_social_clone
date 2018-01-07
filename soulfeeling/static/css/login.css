@@ -1,0 +1,29 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* cover */
+
+#cover {
+    background: #222 url('../img/登录.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#loginContainer{
+    align-items: center;
+}
+
+#loginBtn {
+    background-color: #398dee
+}

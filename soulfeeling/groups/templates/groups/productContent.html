@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link rel="stylesheet" href="{% static "css/productDetails.css" %}">
+<link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="header" style="background-image:url({% static "image/ProductDetails/1.png" %})">
+    <a href="">现在购买 ></a>
+</div>
+<div class="clear"></div>
+<img src="{% static "image/ProductDetails/2.png" %}" class="imgstyle"/>
+<div class="game">
+    <div id="game_left" class="game-left">
+        <img src="{% static "image/ProductDetails/3-left.png" %}" class="imgstyle"/>
+    </div>
+    <div id="game_right" class="game-right">
+        <img src="{% static "image/ProductDetails/3-right.png" %}" class="imgstyle"/>
+    </div>
+</div>
+<div class="clear"></div>
+<ul class="ulstyle">
+    <li class="listyle">
+        <a href="">
+            <img src="{% static "image/ProductDetails/news1.png" %}" class="imgstyle"/>
+        </a>
+    </li>
+    <li class="new2 listyle">
+        <a href="">
+            <img src="{% static "image/ProductDetails/news2.png" %}" class="imgstyle"/>
+        </a>
+    </li>
+    <li class="listyle">
+        <a href="">
+            <img src="{% static "image/ProductDetails/news3.png" %}" class="imgstyle"/>
+        </a>
+    </li>
+</ul>
+
+<div class="clear"></div>
+<div style="margin-top: 3%"></div>
+
+{% endblock %}

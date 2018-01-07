@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link href="{% static "css/feedBack.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
+<script src="{% static "static/js/feedBack.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<img src="{% static "image/FeedBack/feedBack.png" %}" class="feedBack" />
+<div class="inline">
+    <div class="afterMarket">
+        <img id="shop" src="{% static "image/FeedBack/shopIcon.png" %}" onclick="ShowFeedBackContent('shop')" />
+    </div>
+    <div class="afterMarket">
+        <img id="deliverPolicy" src="{% static "image/FeedBack/deliverPolicy.png" %}" onclick="ShowFeedBackContent('deliverPolicy')" />
+    </div>
+    <div class="afterMarket">
+        <img id="afterMarketPolicy" src="{% static "image/FeedBack/afterMarketPolicy.png" %}"
+         onclick="ShowFeedBackContent('afterMarketPolicy')" />
+    </div>
+    <div class="afterMarket">
+        <img id="feedBackTable" src="{% static "image/FeedBack/feedBackTable.png" %}" onclick="ShowFeedBackContent('feedBackTable')" />
+    </div>
+</div>
+<hr class="line" />
+<div class="clear"></div>
+<div id="shopInfo">
+    <img src="{% static "image/FeedBack/shopDetail.png" %}" class="afterMarketInfos"/>
+</div>
+<div id="deliverInfo">
+    <img src="{% static "image/FeedBack/deliverInfo.png" %}" class="afterMarketInfos"/>
+</div>
+<div id="afterMarketInfo">
+    <img src="{% static "image/FeedBack/afterMarketInfo.png" %}" class="afterMarketInfos"/>
+</div>
+<div id="feedBackTableInfo">
+    <img src="{% static "image/FeedBack/downloadInfo.png" %}" class="feedBackTableDetails" />
+    <img src="{% static "image/FeedBack/downloadTable.png" %}" class="feedBackTableButton" />
+</div>
+
+<div style="margin-top:3%" />
+
+{% endblock %}

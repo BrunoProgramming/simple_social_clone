@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="offline-nav">
+    <h4>线下体验店</h4>
+    <div>
+        <a href="#">首页</a>
+        <a>/</a>
+        <a>全部门店</a>
+    </div>
+</div>
+
+<div id="offline-all">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">最新门店</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">全部门店</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">优惠政策</a>
+        </li>
+    </ul>
+</div>
+
+
+<div id="offline-allStores">
+    <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button"
+             id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              省份／直辖市／行政区
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+<img src="{% static "img/list.png" %}" id="allStoresImg">
+</div>
+
+{% endblock %}

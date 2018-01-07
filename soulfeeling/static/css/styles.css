@@ -1,0 +1,45 @@
+/*
+STYLES.CSS
+
+Course:  Bootstrap 4 Quick Start
+Author:  Brad Hussey
+Website: bradhussey.ca
+*/
+
+html,
+body {
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+#soulFeeling {
+    height: 78px;
+    background: black;
+}
+
+#soulFeeling-link {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 14px 0;
+    font-style: inherit;
+    color: white;
+}
+
+#footer-main {
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0;
+}
+
+.copyright {
+    color: #43505c;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 18px;
+}

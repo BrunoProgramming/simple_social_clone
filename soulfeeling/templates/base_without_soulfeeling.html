@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+          crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+          crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static "css/mainScreen.css" %}">
+    <link rel="shortcut icon" href="{% static "img/logo.png" %}" type="image/x-icon" />
+
+    {% block customeCSSContent %}
+
+    {% endblock %}
+</head>
+<body>
+    <header class="navbar navbar-expand flex-column flex-md-row bd-navbar" id="header-main">
+        <a id="header-logo" class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+            <img src="{% static "img/logo.png" %}">
+        </a>
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'groups:secondPageContent' %}" >幻速赛车</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'groups:offlineStore_onlyOnePage' %}" >线下体验店</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'groups:contactUs' %}" >服务</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"  target="_blank" rel="noopener">社区</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'groups:onlineMessage' %}">在线留言</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <li class="nav-item">
+                <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                    加盟体验店
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="{% static "img/search.png" %}">
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-item nav-link  mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="{% static "img/user.png" %}">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                    <a class="dropdown-item active" href="{% url 'accounts:login' %}">登录</a>
+                    <a class="dropdown-item" href="{% url 'accounts:signup' %}">注册</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div style="margin-top:3%"/>
+    
+    {% block content %}
+
+    {% endblock %}
+
+    {% block soulFeeling %}
+
+    {% endblock %}
+
+    <footer id="footer-main">
+        <section class="links">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6>关于我们</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'groups:productContent' %}">产品简介</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'groups:contactUs' %}">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6>新闻中心</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'groups:fieldInformation' %}">行业动态</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'groups:fieldInformation' %}">公司动态</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'groups:fieldInformation' %}">加盟动态</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6>线下体验店</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'groups:offlineStore_newestStore' %}">最新门店</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'groups:offlineStore' %}">全部门店</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'groups:offlineStore_policy' %}">优惠政策</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6>客服支持</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'groups:feedBack' %}">售后服务</a>
+                            </li>
+                            <li>
+                                <a href="">联系客服</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-unstyled">
+                            <li>
+                                <img src="{% static "img/wechat.png" %}">
+                                <img src="{% static "img/微博.png" %}">
+                                <img src="{% static "img/优酷.png" %}">
+                            </li>
+                        </ul>
+                        <h5>0529-5022711</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="copyright">
+            Copyright©2017 幻速Soulfeeling 版权所有
+        </div>
+    </footer>
+</body>
+</html>

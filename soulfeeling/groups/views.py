@@ -10,6 +10,7 @@ from django.shortcuts import get_object_or_404
 from django.views import generic
 from groups.models import Group,GroupMember
 from . import models
+from django.views.generic import TemplateView
 
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
@@ -68,3 +69,43 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
                 "You have successfully left this group."
             )
         return super().get(request, *args, **kwargs)
+
+
+class contactUsPage(TemplateView):
+    template_name = 'groups/contactUs.html'
+
+
+class feedBackPage(TemplateView):
+    template_name = 'groups/feedBack.html'
+
+
+class fieldInformationPage(TemplateView):
+    template_name = 'groups/fieldInformation.html'
+
+
+class offlineStore_newestStorePage(TemplateView):
+    template_name = 'groups/offlineStore_newestStore.html'
+
+
+class offlineStore_onlyOnePagePage(TemplateView):
+    template_name = 'groups/offlineStore_onlyOnePage.html'
+
+
+class offlineStore_policyPage(TemplateView):
+    template_name = 'groups/offlineStore_policy.html'
+
+
+class offlineStorePage(TemplateView):
+    template_name = 'groups/offlineStore.html'
+
+
+class onlineMessagePage(TemplateView):
+    template_name = 'groups/onlineMessage.html'
+
+
+class productContentPage(TemplateView):
+    template_name = 'groups/productContent.html'
+
+
+class secondPageContentPage(TemplateView):
+    template_name = 'groups/secondPageContent.html'

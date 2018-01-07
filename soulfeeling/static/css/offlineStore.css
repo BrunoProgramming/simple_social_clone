@@ -1,0 +1,88 @@
+#offline-nav{
+    width: 100%;
+    padding:3% 10% 5% 10%;
+    color: #999999;;
+}
+
+.div-fullWidth{
+    width: 100%;
+}
+
+.img-fullWidth {
+    display: block;
+    width: 100%;
+}
+
+#pagination-nav{
+
+}
+
+#pagination-div{
+    padding-left: 30%;
+    padding-bottom: 5%;
+    display: block;
+}
+
+#offline-all{
+    width: 100%;
+    padding-left:9%;
+    padding-bottom: 3%;
+}
+
+#offline-allStores{
+    padding-right:10%;
+    padding-left:10%;
+    padding-bottom: 5%;
+}
+
+#offline-all-news{
+    padding-right:10%;
+    padding-left:9%;
+}
+
+#allStoresImg{
+    width: 100%;
+    display: block;
+}
+
+.dropdown{
+    background-color: transparent;
+    margin-bottom: 5%;
+}
+
+#dropdownMenuButton{
+    background-color: transparent;
+    color: black;
+}
+
+.list-image{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+
+.nav {
+    background-color: #fff;
+  }
+  
+.nav > li {
+    background-color: #fff;
+  }
+  
+.nav > li > a {
+    color: #333;
+    border-bottom: 1px solid transparent;
+  }
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > .active > a,
+.nav > .active > a:hover,
+.nav > .active > a:focus {
+    background-color: #fff;
+    color: #439348;
+    border-bottom: 1px solid #439348;
+  }
+
+#newsImg{
+    padding-bottom: 5%;
+}
