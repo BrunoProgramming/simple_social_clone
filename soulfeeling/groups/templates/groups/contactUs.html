@@ -1,15 +1,58 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block customeCSSContent %}
-<link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
+<link rel="stylesheet" href="{% static "css/contactUs.css" %}">
 {% endblock %}
 
 {% block content %}
 
 <div>
-    <img src="{% static "image/ContactUs/ContactUs.png" %}" />
+    <img src="{% static "image/ContactUs/contact.jpg" %}" />
 </div>
 
-<div style="margin-top:3%"/>
+<div class="details">
+    <div>
+        <div>
+            <a class="header">总部</a>
+        </div>
+        <div class="margion_top">
+            <a class="title">总部地址：</a>
+            <a>&emsp;中国.厦门火炬高新区（翔安）产业区建业楼A座4层</a>
+        </div>
+        <div class="margion_top">
+            <div>
+                <a class="header">运营中心</a>
+            </div>
+            <div>
+                <a class="header">运营中心：</a>
+                <a>&emsp;中国.厦门思明软件园二期望海路65号之二 306</a>
+                <a class="title">体感赛车模拟器交流群</a>
+                <u>49354940</u>
+            </div>
+            <div>
+                <a class="header">电话：</a>
+                <a>&emsp;0592-7162896</a>
+                <a class="title">公司网址&emsp;</a>
+                <a href="http://www.x-motion.cn/">www.x-motion.cn</a>
+            </div>
+            <div>
+                <a class="header">客服：</a>
+                <a>&emsp;0592-5022711</a>
+                <a class="title">联系邮箱：&emsp;</a>
+                <a>info@x-motion.cn<br />chenhb@x-motion.cn</a>
+            </div>
+            <div>
+                <a>客服QQ：&emsp;</a>
+                <u>878158089</u>
+            </div>
+            <div>
+                <a>营销QQ：&emsp;</a>
+                <a>800015765</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:3%" />
 
 {% endblock %}

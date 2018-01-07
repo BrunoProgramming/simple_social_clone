@@ -1,29 +1,53 @@
-html,
+html
+{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
 body {
-    height: 100%;
-    font-family: 'Noto Sans', sans-serif;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-image:url(../../image/login.jpg);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    overflow-y: hidden;
 }
 
-img {
-    max-width: 100%;
+.userName {
+    margin-left:58.5vw;
+    margin-top:35vh;
 }
 
-/* cover */
-
-#cover {
-    background: #222 url('../img/登录.jpg') center center no-repeat;
-    background-size: cover;
-    color: white;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
+#userName,#passWord, #confirm{
+    width: 42%;
+    height:10%;
+    padding:1%
 }
 
-#loginContainer{
-    align-items: center;
+.passWord,.login{
+    margin-left:58.5vw;
+    margin-top:5vh;
 }
 
-#loginBtn {
-    background-color: #398dee
+.register{
+    margin-left:58.5vw;
+    margin-top:10vh;
+}
+
+#loginBtn, #register {
+    background-color:cornflowerblue;
+    border:hidden;
+    width: 45%;
+    padding:1%
+}
+
+#loginTransfer{
+    margin-left:58.5vw;
+    margin-top:6vh;
+    color:cornflowerblue;
 }
