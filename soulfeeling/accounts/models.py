@@ -1,9 +1,10 @@
 from django.contrib import auth
-from django.db import models
 from django.utils import timezone
 
-from django.db import models
+from django.db import migrations, models
 from django.contrib.auth.models import User
+import django.db.models.deletion
+
 
 
 class User(auth.models.User, auth.models.PermissionsMixin):
@@ -16,7 +17,7 @@ class User(auth.models.User, auth.models.PermissionsMixin):
 class UserProfileInfo(models.Model):
 
     # Create relationship (don't inherit from User!)
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,on_delete=django.db.models.deletion.CASCADE)
 
     # Add any additional attributes you want
     portfolio_site = models.URLField(blank=True)
