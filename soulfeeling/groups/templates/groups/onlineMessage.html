@@ -8,43 +8,53 @@
 {% block content %}
 
 <div>
-    <img src="{% static "image/OnlineMessage/在线留言.png" %}" class="mainpicture"/>
-</div>
+        <div class="title">
+            <div class="header">
+                <a>欢迎使用售后服务</a>
+            </div>
+            <div class="title2">
+                <a>首页/在线留言</a>
+            </div>
+        </div>
+        <div>
+            <img src="{% static "image/FeedBack/1.jpg" %}" class="feedBack" />
+        </div>
+    </div>
 
-<div class="formStyle">
-    <div class="text formheader">请填写以下信息，我们将安排专业的客服与您联系</div>
-    <div class="formLine">
-        <div class="text formtd">
-            <div class="star">*</div>
-            <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名&nbsp:</div>
+    <div class="formStyle">
+        <div class="text formheader">请填写以下信息，我们将安排专业的客服与您联系</div>
+        <div class="formLine">
+            <div class="text formtd">
+                <div class="star">*</div>
+                <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名&nbsp:</div>
+            </div>
+            <input id="Text1" type="text" class="formTxtBox" placeholder="请输入您的姓名"/>
         </div>
-        <input id="Text1" type="text" class="formTxtBox" placeholder="请输入您的姓名"/>
-    </div>
-    <div class="formLine">
-        <div class="text formtd">
-            <div class="star">*</div>
-            <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话&nbsp:</div>
+        <div class="formLine">
+            <div class="text formtd">
+                <div class="star">*</div>
+                <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话&nbsp:</div>
+            </div>
+            <input id="Text1" type="text" class="formTxtBox" placeholder="请输入您的真实电话" />
         </div>
-        <input id="Text1" type="text" class="formTxtBox" placeholder="请输入您的真实电话" />
-    </div>
-    <div class="formLine">
-        <div class="text formtd">
-            <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp址&nbsp:</div>
+        <div class="formLine">
+            <div class="text formtd">
+                <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp址&nbsp:</div>
+            </div>
+            <input id="Text1" type="text" class="formTxtBox" placeholder="请输入您的地址" />
         </div>
-        <input id="Text1" type="text" class="formTxtBox" placeholder="请输入您的地址" />
-    </div>
-    <div class="formLine">
-        <div class="text formtd">
-            <div class="star">*</div>
-            <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp留&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp言&nbsp:</div>
+        <div class="formLine">
+            <div class="text formtd special">
+                <div class="star">*</div>
+                <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp留&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp言&nbsp:</div>
+            </div>
+            <textarea class="formTxtBox" placeholder="您有什么想告诉我们的" rows="5"></textarea>
         </div>
-        <textarea class="formTxtBox" placeholder="您有什么想告诉我们的" rows="5"></textarea>
+        <div>
+            <input id="confirm" type="button" value="确定" />
+        </div>
     </div>
-    <div>
-        <input id="confirm" type="button" value="确定" />
-    </div>
-</div>
 
-<div style="margin-top:3%" />
+    <div style="margin-top:3%" />
 
 {% endblock %}

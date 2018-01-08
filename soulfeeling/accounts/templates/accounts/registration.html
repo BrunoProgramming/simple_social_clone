@@ -1,0 +1,27 @@
+{% extends "accounts/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+{% if registered %}
+    <h1>Thank you for registering!</h1>
+{% else %}
+    <h1>Register Here</h1>
+    <h3>Just fill out the form.</h3>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <div class="userName">
+                <input id="userName" name="username" type="text" placeholder="手机号/邮箱/用户名*" />
+            </div>
+            <div class="passWord">
+                <input id="passWord" name="password" type="password" placeholder="设置密码*" />
+            </div>
+            <div class="login">
+                <input id="confirm" name="confirm_password" type="password" placeholder="确认密码*" />
+            </div>
+            <div class="register">
+                <input id="register" type="submit" value="注册" name=""/>
+            </div>
+            <a href="" id="loginTransfer">立即登录></a>
+    </form>
+{% endif %}
+{% endblock %}

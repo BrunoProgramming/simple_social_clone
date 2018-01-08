@@ -1,4 +1,4 @@
-﻿body {
+﻿html,body {
     width:100%;
     height:100%;
     margin:0;
@@ -51,5 +51,66 @@
 
 .afterMarketInfos{
     margin-left:13%;
-    margin-top:2%
+    margin-top:2%;
+    color:dimgrey;
+    margin-right:13%
+}
+
+.header{
+    font-size:xx-large;
+    font-weight:bolder;
+}
+
+.title{
+    position:absolute;
+    width:100%;
+    padding-left:30%;
+    padding-top:10%;
+    color:dimgray
+}
+
+.title2{
+    font-size:larger
+}
+
+.margin_detail{
+    margin-top:1%
+}
+
+.margin_header{
+    margin-top:3%;
+    font-weight:bold;
+}
+
+.attach{
+    margin-top:3%
+}
+
+table{
+    border:0;
+    width:100%;
+}
+
+.firstLine{
+    background-color:dimgray;
+    color:white;
+    font-weight:bold;
+    font-size:large
+}
+
+td{
+    width:18.5%;
+    text-align:center;
+}
+
+.secondLine{
+    background-color:lightgray
+}
+
+.special{
+    font-weight:bold
+}
+
+.secondTable{
+    margin-top:5%
 }

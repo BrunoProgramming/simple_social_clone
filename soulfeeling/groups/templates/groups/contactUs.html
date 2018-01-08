@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block customeCSSContent %}
+<link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
 <link rel="stylesheet" href="{% static "css/contactUs.css" %}">
 {% endblock %}
 
@@ -11,48 +12,96 @@
 </div>
 
 <div class="details">
-    <div>
         <div>
-            <a class="header">总部</a>
-        </div>
-        <div class="margion_top">
-            <a class="title">总部地址：</a>
-            <a>&emsp;中国.厦门火炬高新区（翔安）产业区建业楼A座4层</a>
-        </div>
-        <div class="margion_top">
             <div>
-                <a class="header">运营中心</a>
+                <a class="header">总部</a>
             </div>
-            <div>
-                <a class="header">运营中心：</a>
-                <a>&emsp;中国.厦门思明软件园二期望海路65号之二 306</a>
-                <a class="title">体感赛车模拟器交流群</a>
-                <u>49354940</u>
+            <div class="margin_top">
+                <a class="title">总部地址：</a>
+                <a>&emsp;中国.厦门火炬高新区（翔安）产业区建业楼A座4层</a>
             </div>
-            <div>
-                <a class="header">电话：</a>
-                <a>&emsp;0592-7162896</a>
-                <a class="title">公司网址&emsp;</a>
-                <a href="http://www.x-motion.cn/">www.x-motion.cn</a>
+            <div class="info2">
+                <div>
+                    <a class="header">运营中心</a>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <a class="title">运营中心：</a>
+                            <a>&emsp;中国.厦门思明软件园二期望海路65号之二 306</a>
+                        </td>
+                        <td style="width:50%">
+                            <a class="title margin_left">体感赛车模拟器交流群:&emsp;</a>
+                            <u class="special">49354940</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="title">电话：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;</a>
+                            <a>0592-7162896</a>
+                        </td>
+                        <td>
+                            <a class="title margin_left">公司网址&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <u href="http://www.x-motion.cn/" class="special">www.x-motion.cn</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="title">客服：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;</a>
+                            <a class="special">0592-5022711</a>
+                        </td>
+                        <td>
+                            <a class="title margin_left">联系邮箱：&emsp;</a>
+                            <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@x-motion.cn
+                                <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;chenhb@x-motion.cn</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="title">客服QQ：&nbsp;&nbsp;&emsp;</a>
+                            <u class="special">878158089</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="title">营销QQ：&nbsp;&nbsp;&emsp;</a>
+                            <u class="special">800015765</u>
+                        </td>
+                    </tr>
+                </table>
             </div>
-            <div>
-                <a class="header">客服：</a>
-                <a>&emsp;0592-5022711</a>
-                <a class="title">联系邮箱：&emsp;</a>
-                <a>info@x-motion.cn<br />chenhb@x-motion.cn</a>
+            <div class="margin_top">
+                <a class="header">微信公众号</a>
             </div>
-            <div>
-                <a>客服QQ：&emsp;</a>
-                <u>878158089</u>
-            </div>
-            <div>
-                <a>营销QQ：&emsp;</a>
-                <a>800015765</a>
+            <div class="margin_top">
+                <div class="weixin">
+                    <div>
+                        <img src="{% static "image/ContactUs/weiXin_1.png" %}" />
+                    </div>
+                    <div>
+                        <a class="weixinDesc">X-MOTION公众号</a>
+                    </div>
+                </div>
+                <div class="weixin">
+                    <div>
+                        <img src="{% static "image/ContactUs/weiXin_2.png" %}" />
+                    </div>
+                    <div>
+                        <a class="weixinDesc">幻速竞速平台公众号</a>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
-</div>
 
-<div style="margin-top:3%" />
+    <div style="margin-top:-5%" />
 
 {% endblock %}

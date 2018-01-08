@@ -70,3 +70,7 @@ body {
     font-size: 13px;
     margin-top: 18px;
 }
+
+a, .col{
+    color:black;
+}

@@ -21,4 +21,5 @@ urlpatterns = [
     url(r"onlineMessage/$",views.onlineMessagePage.as_view(),name="onlineMessage"),
     url(r"productContent/$",views.productContentPage.as_view(),name="productContent"),
     url(r"secondPageContent/$",views.secondPageContentPage.as_view(),name="secondPageContent"),
+    url(r"newsInformation/$",views.newsInformationPage.as_view(),name="newsInformation"),
 ]

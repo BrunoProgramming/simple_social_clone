@@ -109,3 +109,6 @@ class productContentPage(TemplateView):
 
 class secondPageContentPage(TemplateView):
     template_name = 'groups/secondPageContent.html'
+
+class newsInformationPage(TemplateView):
+    template_name = 'groups/newsInformation.html'

@@ -1,13 +1,28 @@
-{% extends "base.html" %}
-{% load bootstrap3 %}
-
+{% extends "accounts/base.html" %}
+{% load staticfiles %}
 {% block content %}
-<div class="container">
-    <h1>Login</h1>
-    <form method="POST">
+<form method="post" action="{% url 'accounts:user_login' %}">
         {% csrf_token %}
-        {% bootstrap_form form %}
-        <input type="submit" value="Login" class="btn btn-default">
+        <div class="userName">
+            {% if form.errors %}
+                <p>Your username and password didn't match. Please try again.</p>
+            {% endif %}
+            <input id="userName" name="username" type="text" placeholder="手机号/邮箱/用户名*" />
+        </div>
+        <div class="passWord">
+            <input id="passWord" name="password" type="password" placeholder="密码*" />
+        </div>
+        <div class="login">
+            <input id="loginBtn" type="submit" value="登录" class="btn btn-default">
+            <input type="hidden" name="next" value="{{ next }}" />
+        </div>
+        <div class="register">
+            <input id="register" type="button" value="注册" />
+            <a href="" id="loginTransfer">立即登录></a>
+            <p>
+                <a href="{% url 'password_reset' %}">Lost password?</a>
+            </p>
+        </div>
+
     </form>
-</div>
 {% endblock %}

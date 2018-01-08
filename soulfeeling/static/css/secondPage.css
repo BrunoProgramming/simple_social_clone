@@ -5,12 +5,10 @@
 }
 
 .carousel-control-prev-icon {
-    background-image: url("../img/arrow-left.png");
     height: 10%;
 }
 
 .carousel-control-next-icon{
-    background-image: url("../img/arrow-right.png");
     height: 10%;
 }
 
@@ -30,16 +28,65 @@
 
 #video {
     position: absolute;
-    left: 237px;
-    bottom: 180px;
-    width: 100px;
-    height: 25px;
+    left: 18vw;
+    bottom: 30vh;
 }
 
 #product-detail {
     position: absolute;
-    left: 237px;
-    bottom: 135px;
-    width: 100px;
-    height: 25px;
+    left: 18vw;
+    bottom: 20vh;
+}
+
+.imgstyle {
+    display: block;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+.ulstyle {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.listyle {
+    width: 32%;
+    float: left;
+    list-style-type: none;
+}
+
+.new2 {
+    margin-left:2%;
+    margin-right:2%
+}
+
+.clear{
+    clear:both
+}
+
+.news{
+    position:relative;
+    display:inline-block;
+    color:white;
+}
+
+.newsText{
+    bottom:3vh;
+    position:absolute;
+    left:1vw;
+}
+
+.hrClass{
+    height:3px;
+    width:3vw;
+    border-top-color:white;
+    margin-left:0;
+    margin-top:1vh;
+    margin-bottom:0;
 }

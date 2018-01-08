@@ -1,7 +1,6 @@
 {% extends "base_without_soulfeeling.html" %}
 {% load staticfiles %}
 {% block customeCSSContent %}
-<link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
 <link rel="stylesheet" href="{% static "css/secondPage.css" %}">
 {% endblock %}
 
@@ -30,19 +29,56 @@
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
      data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon" style="background-image:url({% static "img/arrow-left.png" %})" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
      data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon" style="background-image:url({% static "img/arrow-right.png" %})" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
 </div>
 
-<div id="threePngsDiv">
-    <img src="{% static "image/SecondPage/Sample.png" %}" id="threePngs" />
-</div>
-
+<div>
+        <ul class="ulstyle">
+            <li class="listyle">
+                <a href="{% url 'groups:productContent' %}">
+                    <div class="news">
+                        <img src="{% static "image/SecondPage/new1.jpg" %}" class="imgstyle" />
+                        <div class="newsText">
+                            <strong>体感/VR/力反馈</strong>
+                            <hr class="hrClass"/>
+                            了解幻速专业设计与全新科技
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="new2 listyle">
+                <a href="{% url 'groups:offlineStore_onlyOnePage' %}">
+                    <div class="news">
+                        <img src="{% static "image/SecondPage/new2.jpg" %}" class="imgstyle" />
+                        <div class="newsText">
+                            <strong>全国线下体验店</strong>
+                            <hr class="hrClass" />
+                            踩过油门，才懂得速度。尝试漂移，身体力行。
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="listyle">
+                <a href="">
+                    <div class="news">
+                        <img src="{% static "image/SecondPage/new3.jpg" %}" class="imgstyle" />
+                        <div class="newsText">
+                            <strong>主题挑战赛</strong>
+                            <hr class="hrClass" />
+                            挑战全世界的赛车手
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
 
 {% endblock %}

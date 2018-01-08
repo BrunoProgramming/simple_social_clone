@@ -1,0 +1,98 @@
+
+#offline-nav{
+    width: 100%;
+    padding:3% 10% 5% 10%;
+    color: #999999;;
+}
+
+.page-item{
+    margin-right:10%
+}
+
+.div-fullWidth{
+    width: 100%;
+}
+
+.img-fullWidth {
+    display: block;
+    width: 100%;
+}
+
+#offline-allStores{
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+#row-allStores{
+    width: 100%;
+}
+
+#offline-all-news{
+    padding-right:10%;
+    padding-left:9%;
+}
+
+#allStoresImg{
+    width: 100%;
+    display: block;
+}
+
+.dropdown{
+    background-color: transparent;
+    margin-bottom: 5%;
+}
+
+#dropdownMenuButton{
+    background-color: transparent;
+    color: black;
+}
+
+.list-image{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+
+.nav {
+    background-color: #fff;
+  }
+  
+.nav > li {
+    background-color: #fff;
+  }
+  
+.nav > li > a {
+    color: #333;
+    border-bottom: 1px solid transparent;
+  }
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > .active > a,
+.nav > .active > a:hover,
+.nav > .active > a:focus {
+    background-color: #fff;
+    color: #439348;
+    border-bottom: 1px solid #439348;
+  }
+
+#newsImg{
+    padding-bottom: 5%;
+}
+
+.textStyle{
+    font-size:large;
+    color:cornflowerblue
+}
+
+.weixin{
+    margin-top:5%
+}
+
+.weixinIcon{
+    float:left;
+}
+
+.weixinDesc{
+    float:left;
+    margin-top:8vh;
+}

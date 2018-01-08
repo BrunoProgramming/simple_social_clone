@@ -7,78 +7,94 @@
 {% block content %}
 
 <div class="div-fullWidth">
-    <img id="newsImg" src="{% static "img/新闻中心.png" %}" class="img-fullWidth">
-</div>
-
-<div id="offline-all-news">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">行业动态</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">公司动态</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">加盟动态</a>
-        </li>
-    </ul>
-</div>
-
-
-<div id="offline-allStores">
-    <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
-    <div class="dropdown-divider"></div>
-    <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
-    <div class="dropdown-divider"></div>
-    <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
-    <div class="dropdown-divider"></div>
-    <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
-    <div class="dropdown-divider"></div>
-</div>
-
-
-
-<div class="div-fullWidth" id="pagination-div">
-    <nav aria-label="Page navigation example" id="pagination-nav">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
+        <div class="textStyle">
+            <div>
+                极速先锋模拟竞速大赛
+                <br />
+                与F1车手一起同步夺冠
+            </div>
+            <div class="separate">
+                SPEED PIONEER SIMULATED RACING COMPETTION
+                <br />
+                WIN WITH F1 DRIVER SIMULTANEOUSLY
+            </div>
+            <div class="more">
+                <a href="{% url 'groups:newsInformation' %}">
+                    <img src="{% static "image/FieldInfo/more.png" %}" />
                 </a>
+            </div>
+        </div>
+        <img id="newsImg" src="{% static "image/FieldInfo/newHeader.jpg" %}">
+    </div>
+
+    <div id="offline-all-news">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">行业动态</a>
             </li>
-            <li class="page-item">
-                <a class="page-link" href="#">1</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">公司动态</a>
             </li>
-            <li class="page-item">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">5</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">6</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">7</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">8</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">加盟动态</a>
             </li>
         </ul>
-    </nav>
-</div>
+    </div>
+
+    <div id="offline-allStores">
+        <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
+        <div class="dropdown-divider"></div>
+        <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
+        <div class="dropdown-divider"></div>
+        <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
+        <div class="dropdown-divider"></div>
+        <img class="list-image" src="{% static "img/新闻中心list.png" %}" id="allStoresImg">
+        <div class="dropdown-divider"></div>
+    </div>
+
+
+
+    <div class="div-fullWidth" id="pagination-div">
+        <nav aria-label="Page navigation example" id="pagination-nav">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">6</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">7</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">8</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
 {% endblock %}

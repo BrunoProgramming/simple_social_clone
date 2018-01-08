@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link rel="stylesheet" href="{% static "css/newsInfo.css" %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="offline-nav">
+        <h4>新闻中心</h4>
+        <div>
+            <a href="#">首页</a>
+            <a>/</a>
+            <a>新闻中心</a>
+        </div>
+    </div>
+
+    <div class="container" id="offline-allStores">
+        <div class="row" id="row-allStores">
+            <div class="col-8">
+                <img class="list-image" src="{% static "img/3.png" %}" id="allStoresImg">
+                <div class="container">
+                    <nav aria-label="Page navigation example" id="page-bar">
+                        <ul class="pagination justify-content-end" id="page-left">
+                            <li class="page-item">
+                                <a class="page-link" href="#" tabindex="-1">
+                                    上一篇
+                                    <span>全智能健身新品，亮相2017体博会</span>
+                                </a>
+                            </li>
+                            <li class="page-item disabled" id="page-right">
+                                <a class="page-link" href="#">
+                                    下一篇
+                                    <span>网鱼，雨乐等网咖联手幻速</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row textStyle">
+                    <a><h4>|推荐阅读</h4></a>
+                </div>
+                <div class="row">
+                    <img class="list-image" src="{% static "img/1.png" %}">
+                    <a href="#">XMOTION全智能健身新品，亮相2017体博会</a>
+                    <a>2017-03-04</a>
+                </div>
+                <div class="row">
+                    <img class="list-image" src="{% static "img/2.png" %}">
+                    <a href="#">国内首度公开亮相 多种神技能引围观</a>
+                </div>
+                <div class="row">
+                    <img class="list-image" src="{% static "img/2.png" %}">
+                    <a href="#">幻速赛车模拟器，驾驶体验真实逼真，悬挂式支架，完美还原真实驾驶体验</a>
+                    <a>2017-03-04</a>
+                </div>
+                <div class="row textStyle weixin">
+                    <a><h4>|微信订阅</h4></a>
+                </div>
+                <div>
+                    <div class="weixinIcon">
+                        <img src="{% static "img/订阅.png" %}" />
+                    </div>
+                    <div class="weixinDesc">
+                        幻速赛车竞技平台
+                        <br/>
+                        soulfeeling2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
