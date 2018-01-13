@@ -4,9 +4,6 @@
 <form method="post" action="{% url 'accounts:user_login' %}">
         {% csrf_token %}
         <div class="userName">
-            {% if form.errors %}
-                <p>Your username and password didn't match. Please try again.</p>
-            {% endif %}
             <input id="userName" name="username" type="text" placeholder="手机号/邮箱/用户名*" />
         </div>
         <div class="passWord">
@@ -17,11 +14,15 @@
             <input type="hidden" name="next" value="{{ next }}" />
         </div>
         <div class="register">
-            <input id="register" type="button" value="注册" />
-            <a href="" id="loginTransfer">立即登录></a>
+            <a href="{% url 'accounts:register' %}">
+                    <input id="register" type="button" value="注册" />
+            </a>
             <p>
                 <a href="{% url 'password_reset' %}">Lost password?</a>
             </p>
+            {% for error in form.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
         </div>
 
     </form>

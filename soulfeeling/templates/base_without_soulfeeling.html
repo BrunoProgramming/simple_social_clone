@@ -38,34 +38,67 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="{% url 'groups:contactUs' %}" >服务</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"  target="_blank" rel="noopener">社区</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'groups:onlineMessage' %}">在线留言</a>
-                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"  target="_blank" rel="noopener">社区</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'groups:onlineMessage' %}">在线留言</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"  target="_blank" rel="noopener">社区</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:user_login' %}">在线留言</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-            <li class="nav-item">
-                <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
-                    加盟体验店
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
-                    <img src="{% static "img/search.png" %}">
-                </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-item nav-link  mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="{% static "img/user.png" %}">
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-                    <a class="dropdown-item active" href="{% url 'accounts:login' %}">登录</a>
-                    <a class="dropdown-item" href="{% url 'accounts:signup' %}">注册</a>
-                </div>
-            </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                            加盟体验店
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                            <img src="{% static "img/search.png" %}">
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="{% url 'accounts:user_login' %}" target="_blank" rel="noopener" aria-label="Twitter">
+                            加盟体验店
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="{% url 'accounts:user_login' %}" target="_blank" rel="noopener" aria-label="Twitter">
+                            <img src="{% static "img/search.png" %}">
+                        </a>
+                    </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-item nav-link  mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="{% static "img/user.png" %}">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                            <a class="dropdown-item active" href="{% url 'accounts:logout' %}">登出</a>
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-item nav-link  mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="{% static "img/user.png" %}">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                            <a class="dropdown-item active" href="{% url 'accounts:login' %}">登录</a>
+                            <a class="dropdown-item" href="{% url 'accounts:signup' %}">注册</a>
+                        </div>
+                    </li>
+                {% endif %}
         </ul>
     </header>
 

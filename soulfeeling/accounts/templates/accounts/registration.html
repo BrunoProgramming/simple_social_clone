@@ -3,10 +3,8 @@
 {% block content %}
 
 {% if registered %}
-    <h1>Thank you for registering!</h1>
+    <h1></h1>
 {% else %}
-    <h1>Register Here</h1>
-    <h3>Just fill out the form.</h3>
     <form enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         <div class="userName">
@@ -21,7 +19,10 @@
             <div class="register">
                 <input id="register" type="submit" value="注册" name=""/>
             </div>
-            <a href="" id="loginTransfer">立即登录></a>
+            <a href="{% url 'accounts:user_login' %}" id="loginTransfer">立即登录></a>
+            {% for error in form.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
     </form>
 {% endif %}
 {% endblock %}

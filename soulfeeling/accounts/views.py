@@ -34,7 +34,7 @@ def user_logout(request):
     # Log out the user.
     logout(request)
     # Return to homepage.
-    return HttpResponseRedirect(reverse('index'))
+    return HttpResponseRedirect(reverse('accounts:user_login'))
 
 def register(request):
 
@@ -66,9 +66,12 @@ def register(request):
             print(user_form.errors)
 
     else:
+        print("blank page")
         # Was not an HTTP post so we just render the forms as blank.
         user_form = UserForm()
 
+    if registered:
+        return HttpResponseRedirect('accounts/user_login')
     # This is the render and context dictionary to feed
     # back to the registration.html file page.
     return render(request,'accounts/registration.html',

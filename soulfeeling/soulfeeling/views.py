@@ -13,5 +13,5 @@ class HomePage(TemplateView):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated():
-            return HttpResponseRedirect(reverse("test"))
-        return super().get(request, *args, **kwargs)
+            return HttpResponseRedirect(reverse("groups:secondPageContent"))
+        return HttpResponseRedirect(reverse("accounts:user_login"))
