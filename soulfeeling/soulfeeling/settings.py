@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'groups',
     'posts',
     'accounts',
+    'onlinemessages',
 ]
 
 MIDDLEWARE = [

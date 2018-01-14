@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django import forms
 from django.contrib.auth.models import User
-from accounts.models import UserProfileInfo, SuggestMessage
+from accounts.models import UserProfileInfo
 
 
 class UserCreateForm(UserCreationForm):

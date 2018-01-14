@@ -119,14 +119,3 @@ def user_login(request):
     else:
         #Nothing has been provided for username or password.
         return render(request, 'accounts/login.html', {})
-
-
-class onlineMessagePage(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
-    fields = ('user','phone','address','message')
-    model = models.SuggestMessage
-
-    def form_valid(self, form):
-        self.object = form.save(commit=False)
-        self.object.user = self.request.user
-        self.object.save()
-        return super().form_valid(form)

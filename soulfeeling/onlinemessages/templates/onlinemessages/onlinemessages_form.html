@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <form method="post" action="{% url 'groups:onlineMessage' %}">
+    <form method="post" action="{% url 'onlinemessages:create' %}">
         {% csrf_token %}
         <div class="formStyle">
             <div class="text formheader">请填写以下信息，我们将安排专业的客服与您联系</div>
@@ -37,20 +37,20 @@
                     <div class="star">*</div>
                     <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话&nbsp:</div>
                 </div>
-                <input id="Text1" type="text" name="phone" class="formTxtBox" placeholder="请输入您的真实电话" />
+                <input id="Text2" value="{{ phone }}" type="text" name="phone" class="formTxtBox" placeholder="请输入您的真实电话" />
             </div>
             <div class="formLine">
                 <div class="text formtd">
                     <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp址&nbsp:</div>
                 </div>
-                <input id="Text1" name="address" type="text" class="formTxtBox" placeholder="请输入您的地址" />
+                <input id="Text3" value="{{ address }}" name="address" type="text" class="formTxtBox" placeholder="请输入您的地址" />
             </div>
             <div class="formLine">
                 <div class="text formtd special">
                     <div class="star">*</div>
                     <div class="starInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp留&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp言&nbsp:</div>
                 </div>
-                <textarea class="formTxtBox" name="message" placeholder="您有什么想告诉我们的" rows="5"></textarea>
+                <textarea class="formTxtBox" value="{{ message }}" name="message" placeholder="您有什么想告诉我们的" rows="5"></textarea>
             </div>
             <div>
                 <input id="confirm" type="submit" value="确定" />

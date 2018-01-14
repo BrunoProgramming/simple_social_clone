@@ -31,28 +31,3 @@ class UserProfileInfo(models.Model):
     def __str__(self):
         # Built-in attribute of django.contrib.auth.models.User !
         return self.user.username
-
-
-class SuggestMessage(models.Model):
-    user = models.OneToOneField(User,on_delete=django.db.models.deletion.CASCADE)
-    phone = models.TextField()
-    address = models.TextField()
-    created_at = models.DateTimeField(auto_now=True)
-    message = models.TextField()
-    message_html = models.TextField(editable=False)
-
-    def __str__(self):
-        return self.message
-
-    def save(self, *args, **kwargs):
-        self.message_html = misaka.html(self.message)
-        super().save(*args, **kwargs)
-
-    def get_absolute_url(self):
-        return reverse(
-            "groups:onlineMessage",
-        )
-
-    class Meta:
-        ordering = ["-created_at"]
-        unique_together = ["user", "message"]
