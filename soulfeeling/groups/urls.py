@@ -21,4 +21,9 @@ urlpatterns = [
     url(r"productContent/$",views.productContentPage.as_view(),name="productContent"),
     url(r"secondPageContent/$",views.secondPageContentPage.as_view(),name="secondPageContent"),
     url(r"newsInformation/$",views.newsInformationPage.as_view(),name="newsInformation"),
+
+    url(r"feedBack_afterMarketPolicy/$",views.feedBackPage_afterMarketPolicy.as_view(),name="feedBack_afterMarketPolicy"),
+    url(r"feedBack_deliver/$",views.feedBackPage_deliver.as_view(),name="feedBack_deliver"),
+    url(r"feedBack_feedBackTable/$",views.feedBackPage_feedBackTable.as_view(),name="feedBack_feedBackTable"),
+    url(r"feedBack_shop/$",views.feedBackPage_shop.as_view(),name="feedBack_shop"),
 ]

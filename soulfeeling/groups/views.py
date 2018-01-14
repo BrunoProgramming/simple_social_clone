@@ -80,6 +80,17 @@ class contactUsPage(TemplateView):
 class feedBackPage(TemplateView):
     template_name = 'groups/feedBack.html'
 
+class feedBackPage_afterMarketPolicy(TemplateView):
+    template_name = 'groups/feedBack_afterMarketPolicy.html'
+
+class feedBackPage_deliver(TemplateView):
+    template_name = 'groups/feedBack_deliver.html'
+
+class feedBackPage_feedBackTable(TemplateView):
+    template_name = 'groups/feedBack_feedBackTable.html'
+
+class feedBackPage_shop(TemplateView):
+    template_name = 'groups/feedBack_shop.html'
 
 class fieldInformationPage(TemplateView):
     template_name = 'groups/fieldInformation.html'

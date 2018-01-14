@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link href="{% static "css/feedBack.css" %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+<div>
+        <div class="title">
+            <div class="header">
+                <a>欢迎使用售后服务</a>
+            </div>
+            <div class="title2">
+                <a>首页/售后服务</a>
+            </div>
+        </div>
+        <div>
+            <img src="{% static "image/FeedBack/1.png" %}" class="feedBack" />
+        </div>
+    </div>
+    <div class="inline">
+            <div class="afterMarket">
+                    <a href="{% url 'groups:feedBack_shop' %}">
+                        <img id="shop" src="{% static "image/FeedBack/shopIcon_click.png" %}" />
+                    </a>
+                    </div>
+                    <div class="afterMarket">
+                            <a href="{% url 'groups:feedBack_deliver' %}">
+                        <img id="deliverPolicy" src="{% static "image/FeedBack/deliverPolicy.png" %}" />
+                    </a>
+                    </div>
+                    <div class="afterMarket">
+                            <a href="{% url 'groups:feedBack_afterMarketPolicy' %}">
+                        <img id="afterMarketPolicy" src="{% static "image/FeedBack/afterMarketPolicy.png" %}" />
+                    </a>
+                    </div>
+                    <div class="afterMarket">
+                            <a href="{% url 'groups:feedBack_feedBackTable' %}">
+                        <img id="feedBackTable" src="{% static "image/FeedBack/feedBackTable.png" %}"/>
+                    </a>
+                    </div>
+    </div>
+    <hr class="line" />
+    <div class="clear"></div>
+    <div id="shopInfo">
+        <div class="afterMarketInfos">
+            <div>
+                <a>感谢您选择我们的产品，如您在购买的过程中遇到任何疑问，请及时致电：0592-5022711（周一至周日 9:00-21:00）</a>
+            </div>
+            <div class="margin_detail">
+                <a>联系我们客服人员，或发送邮件chenhb@x-motion.cn，我们将及时处理。</a>
+            </div>
+            <div>
+                <div class="margin_header">
+                    <a>购买渠道</a>
+                </div>
+                <div class="margin_detail">
+                    <a>X-MOTION相关产品及配件目前仅限在中国大陆地区购买</a>
+                </div>
+                <div class="margin_detail">
+                    <a>官方购买渠道：登入官网www.x-motion.cn,营销QQ号(800015765)咨询购买。</a>
+                </div>
+                <div class="margin_detail">
+                    <a>您也可以致电0592-5022711/7162896,或发送邮件到chenhb@x-motion.cn联系我们的销售人员</a>
+                </div>
+            </div>
+            <div>
+                <div class="margin_header">
+                    <a>发票说明</a>
+                </div>
+                <div class="margin_detail">
+                    <a>1. 地址、电话、公司名称、纳税人识别号、开户行及账号；</a>
+                </div>
+                <div class="margin_detail">
+                    <a>2.一般纳税人证明扫描件：</a>
+                </div>
+                <div class="margin_detail">
+                    <a>相关开票信息可以联系到对接客服人员咨询发票事宜。</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:3%" />
+
+{% endblock %}

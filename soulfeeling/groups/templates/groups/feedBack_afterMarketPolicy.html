@@ -2,7 +2,6 @@
 {% load staticfiles %}
 {% block customeCSSContent %}
 <link href="{% static "css/feedBack.css" %}" rel="stylesheet" />
-<script src="{% static "js/feedBack.js" %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -21,155 +20,29 @@
         </div>
     </div>
     <div class="inline">
-        <div class="afterMarket">
-            <img id="shop" src="{% static "image/FeedBack/shopIcon.png" %}" onclick="ShowFeedBackContent('shop')" />
-        </div>
-        <div class="afterMarket">
-            <img id="deliverPolicy" src="{% static "image/FeedBack/deliverPolicy.png" %}" onclick="ShowFeedBackContent('deliverPolicy')" />
-        </div>
-        <div class="afterMarket">
-            <img id="afterMarketPolicy" src="{% static "image/FeedBack/afterMarketPolicy.png" %}" onclick="ShowFeedBackContent('afterMarketPolicy')" />
-        </div>
-        <div class="afterMarket">
-            <img id="feedBackTable" src="{% static "image/FeedBack/feedBackTable.png" %}" onclick="ShowFeedBackContent('feedBackTable')" />
-        </div>
+            <div class="afterMarket">
+                <a href="{% url 'groups:feedBack_shop' %}">
+                    <img id="shop" src="{% static "image/FeedBack/shopIcon.png" %}" />
+                </a>
+            </div>
+            <div class="afterMarket">
+                <a href="{% url 'groups:feedBack_deliver' %}">
+                    <img id="deliverPolicy" src="{% static "image/FeedBack/deliverPolicy.png" %}" />
+                </a>
+            </div>
+            <div class="afterMarket">
+                <a href="{% url 'groups:feedBack_afterMarketPolicy' %}">
+                    <img id="afterMarketPolicy" src="{% static "image/FeedBack/afterMarketPolicy_click.png" %}" />
+                </a>
+            </div>
+            <div class="afterMarket">
+                <a href="{% url 'groups:feedBack_feedBackTable' %}">
+                    <img id="feedBackTable" src="{% static "image/FeedBack/feedBackTable.png" %}"/>
+                </a>
+            </div>
     </div>
     <hr class="line" />
     <div class="clear"></div>
-    <div id="shopInfo">
-        <div class="afterMarketInfos">
-            <div>
-                <a>感谢您选择我们的产品，如您在购买的过程中遇到任何疑问，请及时致电：0592-5022711（周一至周日 9:00-21:00）</a>
-            </div>
-            <div class="margin_detail">
-                <a>联系我们客服人员，或发送邮件chenhb@x-motion.cn，我们将及时处理。</a>
-            </div>
-            <div>
-                <div class="margin_header">
-                    <a>购买渠道</a>
-                </div>
-                <div class="margin_detail">
-                    <a>X-MOTION相关产品及配件目前仅限在中国大陆地区购买</a>
-                </div>
-                <div class="margin_detail">
-                    <a>官方购买渠道：登入官网www.x-motion.cn,营销QQ号(800015765)咨询购买。</a>
-                </div>
-                <div class="margin_detail">
-                    <a>您也可以致电0592-5022711/7162896,或发送邮件到chenhb@x-motion.cn联系我们的销售人员</a>
-                </div>
-            </div>
-            <div>
-                <div class="margin_header">
-                    <a>发票说明</a>
-                </div>
-                <div class="margin_detail">
-                    <a>1. 地址、电话、公司名称、纳税人识别号、开户行及账号；</a>
-                </div>
-                <div class="margin_detail">
-                    <a>2.一般纳税人证明扫描件：</a>
-                </div>
-                <div class="margin_detail">
-                    <a>相关开票信息可以联系到对接客服人员咨询发票事宜。</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="deliverInfo">
-        <div class="afterMarketInfos">
-            <div>
-                <a>商品将根据客户的发货要求首选德邦或其他物流公司远程快运配送。</a>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;物流查询</a>
-            </div>
-            <div class="margin_detail">
-                <a>发货后，客服人员第一时间提供订单号，利于客户的货物状态查询。</a>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;签收须知</a>
-            </div>
-            <div class="margin_detail">
-                <a>为保障大家的切身利益，我们在此提醒您，收到商品时需要注意一下各项：</a>
-            </div>
-            <div class="margin_detail">
-                <a>1. 发货时，请尽量留下本人能够签收的地址与联系电话；</a>
-            </div>
-            <div class="margin_detail">
-                <a>2.收到商品是请当场验货，检查外包装是否完好，商品种类数量是否与订单明细相符；</a>
-            </div>
-            <div class="margin_detail">
-                <a>在本人不能亲自签收的情况下，请委托他人签收并严格安装第二项内容操作；</a>
-            </div>
-            <div class="margin_detail">
-                <a>如签收后商品出现质量问题，入功能性故障，请您及时联系X-MOTION客服人员处理</a>
-            </div>
-            <div class="margin_header">
-                <div>
-                    <a>免责申明</a>
-                </div>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;关于发货</a>
-            </div>
-            <div class="margin_detail">
-                <a>发货方式：由于X-MOTION属于大件商品，具有一定特殊性不能邮递或快递，只能通过专业的物流公司配送，其他小件商品默认顺丰配送，顺丰无法送达的地</a>
-            </div>
-            <div class="margin_detail">
-                <a>区将改用其他快递公司发货时效：X-MOTION旗下的幻速产品将参照销售协议指定的时间内发出，自订单交易完成之后起7个工作日内发货，无法保证发货的时</a>
-            </div>
-            <div class="margin_detail">
-                <a>间均会在7个工作日内发出，最快情况下我们的商品会24小时内出库的，但受生产派单顺序及客观物流因素印象，可能会有部分延迟，需要您的耐心等待。</a>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;物流送货</a>
-            </div>
-            <div class="margin_detail">
-                <a>1.X-MOTION产品只能通过专业的物流公司发货，由于各地路程远近的不同，集体的运费请向销售人员咨询。</a>
-            </div>
-            <div class="margin_detail">
-                <a>2.X-MOTION产品属于大件商品，为保证运输中的安全性，我们会搭好木架。</a>
-            </div>
-            <div class="margin_detail">
-                <a>3.目前，运费可采用全款与到付的两种方式。</a>
-            </div>
-            <div class="margin_detail">
-                <a>收货地点：</a>
-            </div>
-            <div class="margin_detail">
-                <a>物流公司会将货物送到您的收货地址。但不包含卸货、搬运等内容。需要买家提前安排人手进行卸货和搬运，若因不能卸货等问题而产生的拒收货的现象，来回</a>
-            </div>
-            <div class="margin_detail">
-                <a>运费需由买家承担。</a>
-            </div>
-            <div class="margin_detail">
-                <a>上门安装：</a>
-            </div>
-            <div class="margin_detail">
-                <a>X-MOTION产品采用标准化的工艺制作，在收货之后，按照产品说明书上的说明指导即可完成安装。</a>
-            </div>
-            <div class="margin_detail">
-                <a>如需我们提供上门安装指导的服务，请在购买时提出需求，我们会安排专业的人员为您提供上门安装服务，但需要制服各项上门服务费用，可向销售人员进行了</a>
-            </div>
-            <div class="margin_detail">
-                <a>解，上门安装服务一经确认，无法更改，如需临时变化，请支付违约金。</a>
-            </div>
-            <div class="margin_detail">
-                <a>货物签收：</a>
-            </div>
-            <div class="margin_detail">
-                <a>我们的产品都是经过检查后才发货的，商品不能完全避免在运输过程中的摩擦和碰撞现象，为了保障您的权益，签收前请知悉检查，验货时如需发现件数不对</a>
-            </div>
-            <div class="margin_detail">
-                <a>或损坏请拒收并及时与我们的客户代理联系，如买家非质量问题无理由拒签，产生的全部运费均由买家承担</a>
-            </div>
-            <div class="margin_detail">
-                <a>售后服务：</a>
-            </div>
-            <div class="margin_detail">
-                <a>当您购买我们的产品后，我们会为您提供一系列整套的售后服务，有任何问题，欢迎拨打我们的服务热线：0592-5022711</a>
-            </div>
-        </div>
-    </div>
     <div id="afterMarketInfo">
         <div class="afterMarketInfos">
             <div class="margin_detail">
@@ -333,17 +206,6 @@
             </div>
         </div>
     </div>
-    <div id="feedBackTableInfo">
-        <div>
-            <div class="afterMarketInfos">
-                <a>请将表格下载填写完整后，拍照或扫描后，发送至客服邮箱:878158089@qq.com。真诚感谢您的配合。</a>
-            </div>
-            <div>
-                <img src="{% static "image/FeedBack/downloadTable.png" %}" class="feedBackTableButton" />
-            </div>
-        </div>
-    </div>
-
     <div style="margin-top:3%" />
 
 {% endblock %}
