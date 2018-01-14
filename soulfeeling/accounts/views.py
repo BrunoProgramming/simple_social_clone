@@ -9,8 +9,19 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 
 from . import forms
+from . import models
 from django.shortcuts import render
 from accounts.forms import UserForm,UserProfileInfoForm
+
+from django.core.mail import send_mail
+
+from django.contrib.auth.mixins import(
+    LoginRequiredMixin,
+    PermissionRequiredMixin
+)
+
+from braces.views import SelectRelatedMixin
+from django.views import generic
 
 class SignUp(CreateView):
     form_class = forms.UserCreateForm
@@ -108,3 +119,14 @@ def user_login(request):
     else:
         #Nothing has been provided for username or password.
         return render(request, 'accounts/login.html', {})
+
+
+class onlineMessagePage(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
+    fields = ('user','phone','address','message')
+    model = models.SuggestMessage
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return super().form_valid(form)

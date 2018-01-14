@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django import forms
 from django.contrib.auth.models import User
-from accounts.models import UserProfileInfo
+from accounts.models import UserProfileInfo, SuggestMessage
 
 
 class UserCreateForm(UserCreationForm):
@@ -43,3 +43,5 @@ class UserProfileInfoForm(forms.ModelForm):
     class Meta():
         model = UserProfileInfo
         fields = ('portfolio_site','profile_pic')
+
+

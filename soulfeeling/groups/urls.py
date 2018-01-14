@@ -18,7 +18,6 @@ urlpatterns = [
     url(r"offlineStore_onlyOnePage/$",views.offlineStore_onlyOnePagePage.as_view(),name="offlineStore_onlyOnePage"),
     url(r"offlineStore_policy/$",views.offlineStore_policyPage.as_view(),name="offlineStore_policy"),
     url(r"offlineStore/$",views.offlineStorePage.as_view(),name="offlineStore"),
-    url(r"onlineMessage/$",views.onlineMessagePage.as_view(),name="onlineMessage"),
     url(r"productContent/$",views.productContentPage.as_view(),name="productContent"),
     url(r"secondPageContent/$",views.secondPageContentPage.as_view(),name="secondPageContent"),
     url(r"newsInformation/$",views.newsInformationPage.as_view(),name="newsInformation"),

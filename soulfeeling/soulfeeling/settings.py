@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'bootstrap3',
-    'accounts',
     'groups',
     'posts',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +139,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = "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"
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False

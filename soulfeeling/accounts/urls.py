@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^user_login/$',views.user_login,name='user_login'),
     url(r'^special/',views.special,name='special'),
     url(r'^logout/$', views.user_logout, name='logout'),
+    url(r"onlineMessage/$",views.onlineMessagePage.as_view(),name="onlineMessage"),
 ]

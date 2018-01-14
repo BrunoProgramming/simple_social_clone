@@ -48,3 +48,4 @@ class GroupMember(models.Model):
 
     class Meta:
         unique_together = ("group", "user")
+

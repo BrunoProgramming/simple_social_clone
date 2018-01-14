@@ -12,6 +12,8 @@ from groups.models import Group,GroupMember
 from . import models
 from django.views.generic import TemplateView
 
+from braces.views import SelectRelatedMixin
+
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
     model = Group
@@ -99,8 +101,11 @@ class offlineStorePage(TemplateView):
     template_name = 'groups/offlineStore.html'
 
 
-class onlineMessagePage(TemplateView):
-    template_name = 'groups/onlineMessage.html'
+#class onlineMessagePage(generic.ListView):
+#    template_name = 'groups/onlineMessage.html'
+#    model = SuggestMessage
+    
+
 
 
 class productContentPage(TemplateView):
