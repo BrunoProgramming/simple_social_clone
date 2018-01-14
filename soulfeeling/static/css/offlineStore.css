@@ -103,3 +103,102 @@
 .more{
     margin-top:3%;
 }
+
+
+.newStore{
+    float:left;
+    margin-right:8%;
+}
+
+.newStoreInfo{
+    color:dimgray;
+    float:left;
+}
+
+.address{
+    margin-top:3%;
+}
+
+.addressicon{
+    float:left;
+    margin-right:30px;
+    height:100%
+}
+
+.secondTime{
+    margin-left:14%
+}
+
+.clear{
+    clear:both;
+}
+
+.addressdetails{
+    position:relative;
+}
+
+.phone{
+    color:cornflowerblue
+}
+
+.details{
+    float:right;
+    text-align:center;
+    margin-top:5%;
+}
+
+.midlist{
+    margin-top:10%;
+}
+
+.lastlist{
+    margin-top:10%;
+    margin-bottom:10%;
+}
+
+
+.newsInfoWidth{
+    margin-right:40%
+}
+
+.listActivity{
+    width:100%;
+    margin-top:3%;
+    margin-bottom:3%
+}
+
+.activePicture{
+    width:30%;
+    float:left;
+    margin-right:5%
+}
+
+.newsInfo {
+    color:dimgray;
+    float:left;
+    width:50%;
+}
+
+.date{
+    color:black;
+    float:right;
+    text-align:center;
+    margin-top:5%;
+}
+
+.margin_top{
+    margin-top:3%
+}
+
+.allstore{
+    margin-left:2%;
+}
+
+.secondTime2{
+    margin-left:8.5%
+}
+
+tr{
+    margin-bottom:50px;
+    display:block;
+}

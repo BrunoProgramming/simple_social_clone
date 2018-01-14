@@ -76,7 +76,7 @@ a:hover img {
 }
 
 .partTwo_three{
-    margin-top:40%
+    margin-top:42%
 }
 
 .partThree{
@@ -231,4 +231,8 @@ a:hover img {
 .newsText{
     bottom:3vh;
     position:absolute;
+}
+
+.buy{
+    color:cornflowerblue;
 }

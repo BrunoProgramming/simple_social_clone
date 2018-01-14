@@ -96,3 +96,31 @@
     float:left;
     margin-top:8vh;
 }
+
+.policy{
+    margin-left:10%;
+    color:dimgrey;
+    margin-bottom:5%
+}
+
+.weixinDesc{
+    float:left;
+    margin-top:8vh;
+}
+
+.line{
+    height:3px;
+    border-top-color:gray;
+}
+
+.newsPicture{
+    margin-top:3%;
+    margin-bottom:3%;
+    width:100%;
+    margin-right:0;
+    display:block;
+}
+
+.txtStyle{
+    color:dimgray;
+}

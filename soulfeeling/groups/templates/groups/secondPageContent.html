@@ -17,7 +17,9 @@
             <div id="img-container">
                 <img class="d-block w-100" src="{% static "image/SecondPage/Slide/1.png" %}" alt="First slide" id="first-slide">
                 <img src="{% static "img/video.png" %}" id="video">
-                <img src="{% static "img/productDetails.png" %}" id="product-detail">
+				<a href="productContent.html">
+					<img src="{% static "img/productDetails.png" %}" id="product-detail">
+				</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -44,7 +46,7 @@
             <li class="listyle">
                 <a href="{% url 'groups:productContent' %}">
                     <div class="news">
-                        <img src="{% static "image/SecondPage/news1.png" %}" class="imgstyle" />
+                        <img src="{% static "image/SecondPage/new1.png" %}" class="imgstyle" />
                         <div class="newsText">
                             <strong>体感/VR/力反馈</strong>
                             <hr class="hrClass"/>
@@ -56,7 +58,7 @@
             <li class="new2 listyle">
                 <a href="{% url 'groups:offlineStore_onlyOnePage' %}">
                     <div class="news">
-                        <img src="{% static "image/SecondPage/news2.png" %}" class="imgstyle" />
+                        <img src="{% static "image/SecondPage/new2.png" %}" class="imgstyle" />
                         <div class="newsText">
                             <strong>全国线下体验店</strong>
                             <hr class="hrClass" />
@@ -68,7 +70,7 @@
             <li class="listyle">
                 <a href="">
                     <div class="news">
-                        <img src="{% static "image/SecondPage/news3.png" %}" class="imgstyle" />
+                        <img src="{% static "image/SecondPage/new3.png" %}" class="imgstyle" />
                         <div class="newsText">
                             <strong>主题挑战赛</strong>
                             <hr class="hrClass" />
