@@ -18,7 +18,7 @@
     display: block;
 }
 
-#offline-all{
+#offline-allStores, #offline-Activity, #offline-newStores{
     width: 100%;
     padding-left:9%;
     padding-bottom: 3%;
@@ -177,6 +177,7 @@
     color:dimgray;
     float:left;
     width:50%;
+	margin-left:10px;
 }
 
 .date{
@@ -201,4 +202,13 @@
 tr{
     margin-bottom:50px;
     display:block;
+}
+
+
+.margin_detail{
+    margin-top:10px;
+}
+
+.margin_header{
+    margin-top:20px;
 }

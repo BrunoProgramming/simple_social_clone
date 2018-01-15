@@ -20,9 +20,6 @@
                 <input id="register" type="submit" value="注册" name=""/>
             </div>
             <a href="{% url 'accounts:user_login' %}" id="loginTransfer">立即登录></a>
-            {% for error in form.errors %}
-                <p style="color: red">{{ error }}</p>
-            {% endfor %}
     </form>
 {% endif %}
 {% endblock %}

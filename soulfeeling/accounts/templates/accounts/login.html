@@ -20,9 +20,6 @@
             <p>
                 <a href="{% url 'password_reset' %}">Lost password?</a>
             </p>
-            {% for error in form.errors %}
-                <p style="color: red">{{ error }}</p>
-            {% endfor %}
         </div>
 
     </form>

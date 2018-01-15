@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
           crossorigin="anonymous"></script>
 
-     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+     <!--<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">-->
      
     <link rel="stylesheet" href="{% static "css/mainScreen.css" %}">
     <link rel="shortcut icon" href="{% static "img/logo.png" %}" type="image/x-icon" />
@@ -47,7 +47,7 @@
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"  target="_blank" rel="noopener">社区</a>
+                        <a class="nav-link" target="_blank" rel="noopener">社区</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'accounts:user_login' %}">在线留言</a>
@@ -58,12 +58,12 @@
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                        <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Twitter">
                             加盟体验店
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                        <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Twitter">
                             <img src="{% static "img/search.png" %}">
                         </a>
                     </li>
@@ -101,8 +101,6 @@
                 {% endif %}
         </ul>
     </header>
-
-    <div style="margin-top:3%"/>
     
     {% block content %}
 
@@ -159,7 +157,7 @@
                         <h6>客服支持</h6>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="{% url 'groups:feedBack_shop' %}">售后服务</a>
+                                <a href="{% url 'groups:feedBack' %}">售后服务</a>
                             </li>
                             <li>
                                 <a href="">联系客服</a>

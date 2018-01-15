@@ -17,7 +17,7 @@
             <div id="img-container">
                 <img class="d-block w-100" src="{% static "image/SecondPage/Slide/1.png" %}" alt="First slide" id="first-slide">
                 <img src="{% static "img/video.png" %}" id="video">
-				<a href="productContent.html">
+				<a href="{% url 'groups:productContent' %}">
 					<img src="{% static "img/productDetails.png" %}" id="product-detail">
 				</a>
             </div>
