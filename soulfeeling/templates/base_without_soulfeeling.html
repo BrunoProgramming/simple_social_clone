@@ -10,7 +10,6 @@
      <link rel="stylesheet" href="{% static "bootstrap-4.0.0-beta.2/bootstrap.min.js" %}">
     <link rel="stylesheet" href="{% static "css/mainScreen.css" %}">
     <link rel="shortcut icon" href="{% static "img/logo.png" %}" type="image/x-icon" />
-
     {% block customeCSSContent %}
 
     {% endblock %}
@@ -150,7 +149,7 @@
                         <h6>客服支持</h6>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="{% url 'groups:feedBack_shop' %}">售后服务</a>
+                                <a href="{% url 'groups:feedBack' %}">售后服务</a>
                             </li>
                             <li>
                                 <a href="">联系客服</a>

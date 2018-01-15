@@ -2,7 +2,24 @@
 {% load staticfiles %}
 {% block customeCSSContent %}
 <link href="{% static "css/feedBack.css" %}" rel="stylesheet" />
-<script src="{% static "js/feedBack.js" %}"></script>
+
+<script>
+    var shop = "{% static 'image/FeedBack/shopIcon.png' %}";
+    var shop_click = "{% static 'image/FeedBack/shopIcon_click.png' %}";
+    
+    var deliverPolicy = "{% static 'image/FeedBack/deliverPolicy.png' %}";
+    var deliverPolicy_click = "{% static 'image/FeedBack/deliverPolicy_click.png' %}";
+
+    var afterMarketPolicy = "{% static 'image/FeedBack/afterMarketPolicy.png' %}";
+    var afterMarketPolicy_click = "{% static 'image/FeedBack/afterMarketPolicy_click.png' %}";
+
+    var feedBackTable = "{% static 'image/FeedBack/feedBackTable.png' %}";
+    var feedBackTable_click = "{% static 'image/FeedBack/feedBackTable_click.png' %}";
+    
+</script>
+
+<script src="{% static "js/feedBackTest.js" %}"></script>
+
 {% endblock %}
 
 {% block content %}
@@ -22,16 +39,16 @@
     </div>
     <div class="inline">
         <div class="afterMarket">
-            <img id="shop" src="{% static "image/FeedBack/shopIcon.png" %}" onclick="ShowFeedBackContent('shop')" />
+            <img id="shop" src="{% static "image/FeedBack/shopIcon_click.png" %}" onclick="changeShopImage('shop');" />
         </div>
         <div class="afterMarket">
-            <img id="deliverPolicy" src="{% static "image/FeedBack/deliverPolicy.png" %}" onclick="ShowFeedBackContent('deliverPolicy')" />
+            <img id="deliverPolicy" src="{% static "image/FeedBack/deliverPolicy.png" %}" onclick="changeDeliverImage('deliverPolicy');" />
         </div>
         <div class="afterMarket">
-            <img id="afterMarketPolicy" src="{% static "image/FeedBack/afterMarketPolicy.png" %}" onclick="ShowFeedBackContent('afterMarketPolicy')" />
+            <img id="afterMarketPolicy" src="{% static "image/FeedBack/afterMarketPolicy.png" %}" onclick="changeMarketImage('afterMarketPolicy');" />
         </div>
         <div class="afterMarket">
-            <img id="feedBackTable" src="{% static "image/FeedBack/feedBackTable.png" %}" onclick="ShowFeedBackContent('feedBackTable')" />
+            <img id="feedBackTable" src="{% static "image/FeedBack/feedBackTable.png" %}" onclick="changeBackTableImage('feedBackTable');" />
         </div>
     </div>
     <hr class="line" />
