@@ -17,6 +17,11 @@
     color:red;
 }
 
+.imageDetails{
+    width:100%;
+    height:100%;
+}
+
 .details{
     margin-top:2%;
     margin-left:25%;

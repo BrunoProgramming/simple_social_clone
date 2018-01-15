@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% block customeCSSContent %}
 <link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
+<script src="{% static "js/offlineStorePolicy.js" %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -11,214 +12,541 @@
     <div>
         <a href="#">首页</a>
         <a>/</a>
-        <a>优惠政策</a>
+        <a id="linkContent">全部门店</a>
     </div>
 </div>
 
 <div id="offline-all">
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link active" href="#">最新门店</a>
+            <a id="navFirst" class="nav-link active" onclick="changeNewStore('shop');">最新门店</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">全部门店</a>
+            <a id="navSecond" class="nav-link" onclick="changeAllStore('shop');">全部门店</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">优惠政策</a>
+            <a id="navThird" class="nav-link" onclick="changePolicyStore('shop');">优惠政策</a>
         </li>
     </ul>
 </div>
 
+<div id="offlineStoreFirst">
+    <div id="offline-allStores">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                省份／直辖市／行政区
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <div>
+            <table cellpadding="10px">
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="{% static "image/offlineStore/store1.png" %}"/>
+                            </div>
+                            <div class="allstore margin_top">
+                                <div>
+                                    <h5 class="phone">厦门市闽南古镇赛车竞速管</h5>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/address.png" %}" />
+                                    </div>
+                                    <div>
+                                        厦门市湖里区闽南古镇节庆广场102-103号
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/clock.png" %}" />
+                                    </div>
+                                    <div>
+                                        <div class="addressdetails">
+                                            <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                            <div class="secondTime2">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/phone.png" %}" />
+                                    </div>
+                                    <div class="phone">
+                                        0592-9876364
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="{% static "image/offlineStore/store2.png" %}" class="allstoreImg" />
+                            </div>
+                            <div class="allstore margin_top">
+                                <div>
+                                    <h5 class="phone">厦门市闽南古镇赛车竞速管</h5>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/address.png" %}" />
+                                    </div>
+                                    <div>
+                                        厦门市湖里区闽南古镇节庆广场102-103号
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/clock.png" %}" />
+                                    </div>
+                                    <div>
+                                        <div class="addressdetails">
+                                            <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                            <div class="secondTime2">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/phone.png" %}" />
+                                    </div>
+                                    <div class="phone">
+                                        0592-9876364
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="{% static "image/offlineStore/store1.png" %}" />
+                            </div>
+                            <div class="allstore margin_top">
+                                <div>
+                                    <h5 class="phone">厦门市闽南古镇赛车竞速管</h5>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/address.png" %}" />
+                                    </div>
+                                    <div>
+                                        厦门市湖里区闽南古镇节庆广场102-103号
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/clock.png" %}" />
+                                    </div>
+                                    <div>
+                                        <div class="addressdetails">
+                                            <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                            <div class="secondTime2">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/phone.png" %}" />
+                                    </div>
+                                    <div class="phone">
+                                        0592-9876364
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="{% static "image/offlineStore/store2.png" %}" class="allstoreImg" />
+                            </div>
+                            <div class="allstore margin_top">
+                                <div>
+                                    <h5 class="phone">厦门市闽南古镇赛车竞速管</h5>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/address.png" %}" />
+                                    </div>
+                                    <div>
+                                        厦门市湖里区闽南古镇节庆广场102-103号
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/clock.png" %}" />
+                                    </div>
+                                    <div>
+                                        <div class="addressdetails">
+                                            <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                            <div class="secondTime2">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <div class="addressicon">
+                                        <img src="{% static "img/phone.png" %}" />
+                                    </div>
+                                    <div class="phone">
+                                        0592-9876364
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="offlineStoreSecond">
+        <div id="offline-allStores">
+                <div>
+                    <div class="newStore">
+                        <img src="{% static "image/offlineStore/store.png" %}" />
+                    </div>
+                    <div class="newStoreInfo">
+                        <div>
+                            <h3>厦门市闽南古镇赛车竞速管</h3>
+                        </div>  
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/address.png" %}" />
+                            </div>
+                            <div>
+                                厦门市湖里区闽南古镇节庆广场102-103号
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/clock.png" %}" />
+                            </div>
+                            <div>
+                                <div class="addressdetails">
+                                    <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                    <div class="secondTime">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/phone.png" %}" />
+                            </div>
+                            <div class="phone">
+                                0592-9876364
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <img src="{% static "img/detail.png" %}" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="midlist">
+                    <div class="newStore">
+                        <img src="{% static "image/offlineStore/store.png" %}"/>
+                    </div>
+                    <div class="newStoreInfo">
+                        <div>
+                            <h3>厦门市闽南古镇赛车竞速管</h3>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/address.png" %}" />
+                            </div>
+                            <div>
+                                厦门市湖里区闽南古镇节庆广场102-103号
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/clock.png" %}"/>
+                            </div>
+                            <div>
+                                <div class="addressdetails">
+                                    <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                    <div class="secondTime">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/phone.png" %}" />
+                            </div>
+                            <div class="phone">
+                                0592-9876364
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <img src="{% static "img/detail.png" %}" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="lastlist">
+                    <div class="newStore">
+                        <img src="{% static "image/offlineStore/store.png" %}" />
+                    </div>
+                    <div class="newStoreInfo">
+                        <div>
+                            <h3>厦门市闽南古镇赛车竞速管</h3>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/address.png" %}" />
+                            </div>
+                            <div>
+                                厦门市湖里区闽南古镇节庆广场102-103号
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/clock.png" %}" />
+                            </div>
+                            <div>
+                                <div class="addressdetails">
+                                    <div>周一至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                    <div class="secondTime">周四至周日：&nbsp;&nbsp;&nbsp;&nbsp;10:00-22:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="addressicon">
+                                <img src="{% static "img/phone.png" %}" />
+                            </div>
+                            <div class="phone">
+                                0592-9876364
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <img src="{% static "img/detail.png" %}" />
+                    </div>
+                </div>
+            </div>
+        
+        
+</div>
+<div id="offlineStoreThird">
+        <div id="offline-allStores">
+                <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                         id="dropdownMenuButton" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          省份／直辖市／行政区
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+            <img src="{% static "img/全部门店.png" %}" id="allStoresImg">
+            </div>
+</div>
+<div id="offlineStoreFourth">
+        <div id="offline-allStores">
+                <div>
+                    <div class="policy">
+                            <div>
+                                <a>商品将根据客户的发货要求首选德邦或其他物流公司远程快运配送。</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>&bull;物流查询</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>发货后，客服人员第一时间提供订单号，利于客户的货物状态查询。</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>&bull;签收须知</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>为保障大家的切身利益，我们在此提醒您，收到商品时需要注意一下各项：</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>1. 发货时，请尽量留下本人能够签收的地址与联系电话；</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>2.收到商品是请当场验货，检查外包装是否完好，商品种类数量是否与订单明细相符；</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>在本人不能亲自签收的情况下，请委托他人签收并严格安装第二项内容操作；</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>如签收后商品出现质量问题，入功能性故障，请您及时联系X-MOTION客服人员处理</a>
+                            </div>
+                            <div class="margin_header margin_header">
+                                <div>
+                                    <h4>免责申明</h4>
+                                </div>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>&bull;关于发货</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>发货方式：由于X-MOTION属于大件商品，具有一定特殊性不能邮递或快递，只能通过专业的物流公司配送，其他小件商品默认顺丰配送，顺丰无法送达的地</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>区将改用其他快递公司发货时效：X-MOTION旗下的幻速产品将参照销售协议指定的时间内发出，自订单交易完成之后起7个工作日内发货，无法保证发货的时</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>间均会在7个工作日内发出，最快情况下我们的商品会24小时内出库的，但受生产派单顺序及客观物流因素印象，可能会有部分延迟，需要您的耐心等待。</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>&bull;物流送货</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>1.X-MOTION产品只能通过专业的物流公司发货，由于各地路程远近的不同，集体的运费请向销售人员咨询。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>2.X-MOTION产品属于大件商品，为保证运输中的安全性，我们会搭好木架。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>3.目前，运费可采用全款与到付的两种方式。</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>收货地点：</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>物流公司会将货物送到您的收货地址。但不包含卸货、搬运等内容。需要买家提前安排人手进行卸货和搬运，若因不能卸货等问题而产生的拒收货的现象，来回</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>运费需由买家承担。</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>上门安装：</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>X-MOTION产品采用标准化的工艺制作，在收货之后，按照产品说明书上的说明指导即可完成安装。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>如需我们提供上门安装指导的服务，请在购买时提出需求，我们会安排专业的人员为您提供上门安装服务，但需要制服各项上门服务费用，可向销售人员进行了</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>解，上门安装服务一经确认，无法更改，如需临时变化，请支付违约金。</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>货物签收：</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>我们的产品都是经过检查后才发货的，商品不能完全避免在运输过程中的摩擦和碰撞现象，为了保障您的权益，签收前请知悉检查，验货时如需发现件数不对</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>或损坏请拒收并及时与我们的客户代理联系，如买家非质量问题无理由拒签，产生的全部运费均由买家承担</a>
+                            </div>
+                            <div class="margin_detail margin_header">
+                                <h5>售后服务：</h5>
+                            </div>
+                            <div class="margin_detail">
+                                <a>当您购买我们的产品后，我们会为您提供一系列整套的售后服务，有任何问题，欢迎拨打我们的服务热线：0592-5022711</a>
+                            </div>
+                        </div>
+                            <div>
+                                <a>商品将根据客户的发货要求首选德邦或其他物流公司远程快运配送。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>&bull;物流查询</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>发货后，客服人员第一时间提供订单号，利于客户的货物状态查询。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>&bull;签收须知</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>为保障大家的切身利益，我们在此提醒您，收到商品时需要注意一下各项：</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>1. 发货时，请尽量留下本人能够签收的地址与联系电话；</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>2.收到商品是请当场验货，检查外包装是否完好，商品种类数量是否与订单明细相符；</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>在本人不能亲自签收的情况下，请委托他人签收并严格安装第二项内容操作；</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>如签收后商品出现质量问题，入功能性故障，请您及时联系X-MOTION客服人员处理</a>
+                            </div>
+                            <div class="margin_header">
+                                <div>
+                                    <a>免责申明</a>
+                                </div>
+                            </div>
+                            <div class="margin_detail">
+                                <a>&bull;关于发货</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>发货方式：由于X-MOTION属于大件商品，具有一定特殊性不能邮递或快递，只能通过专业的物流公司配送，其他小件商品默认顺丰配送，顺丰无法送达的地</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>区将改用其他快递公司发货时效：X-MOTION旗下的幻速产品将参照销售协议指定的时间内发出，自订单交易完成之后起7个工作日内发货，无法保证发货的时</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>间均会在7个工作日内发出，最快情况下我们的商品会24小时内出库的，但受生产派单顺序及客观物流因素印象，可能会有部分延迟，需要您的耐心等待。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>&bull;物流送货</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>1.X-MOTION产品只能通过专业的物流公司发货，由于各地路程远近的不同，集体的运费请向销售人员咨询。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>2.X-MOTION产品属于大件商品，为保证运输中的安全性，我们会搭好木架。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>3.目前，运费可采用全款与到付的两种方式。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>收货地点：</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>物流公司会将货物送到您的收货地址。但不包含卸货、搬运等内容。需要买家提前安排人手进行卸货和搬运，若因不能卸货等问题而产生的拒收货的现象，来回</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>运费需由买家承担。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>上门安装：</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>X-MOTION产品采用标准化的工艺制作，在收货之后，按照产品说明书上的说明指导即可完成安装。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>如需我们提供上门安装指导的服务，请在购买时提出需求，我们会安排专业的人员为您提供上门安装服务，但需要制服各项上门服务费用，可向销售人员进行了</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>解，上门安装服务一经确认，无法更改，如需临时变化，请支付违约金。</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>货物签收：</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>我们的产品都是经过检查后才发货的，商品不能完全避免在运输过程中的摩擦和碰撞现象，为了保障您的权益，签收前请知悉检查，验货时如需发现件数不对</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>或损坏请拒收并及时与我们的客户代理联系，如买家非质量问题无理由拒签，产生的全部运费均由买家承担</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>售后服务：</a>
+                            </div>
+                            <div class="margin_detail">
+                                <a>当您购买我们的产品后，我们会为您提供一系列整套的售后服务，有任何问题，欢迎拨打我们的服务热线：0592-5022711</a>
+                            </div>
+                        </div>
+                </div>
+                </div>
+</div>
 
-<div id="offline-allStores">
-<div>
-    <div class="policy">
-            <div>
-                <a>商品将根据客户的发货要求首选德邦或其他物流公司远程快运配送。</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>&bull;物流查询</h5>
-            </div>
-            <div class="margin_detail">
-                <a>发货后，客服人员第一时间提供订单号，利于客户的货物状态查询。</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>&bull;签收须知</h5>
-            </div>
-            <div class="margin_detail">
-                <a>为保障大家的切身利益，我们在此提醒您，收到商品时需要注意一下各项：</a>
-            </div>
-            <div class="margin_detail">
-                <a>1. 发货时，请尽量留下本人能够签收的地址与联系电话；</a>
-            </div>
-            <div class="margin_detail">
-                <a>2.收到商品是请当场验货，检查外包装是否完好，商品种类数量是否与订单明细相符；</a>
-            </div>
-            <div class="margin_detail">
-                <a>在本人不能亲自签收的情况下，请委托他人签收并严格安装第二项内容操作；</a>
-            </div>
-            <div class="margin_detail">
-                <a>如签收后商品出现质量问题，入功能性故障，请您及时联系X-MOTION客服人员处理</a>
-            </div>
-            <div class="margin_header margin_header">
-                <div>
-                    <h4>免责申明</h4>
-                </div>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>&bull;关于发货</h5>
-            </div>
-            <div class="margin_detail">
-                <a>发货方式：由于X-MOTION属于大件商品，具有一定特殊性不能邮递或快递，只能通过专业的物流公司配送，其他小件商品默认顺丰配送，顺丰无法送达的地</a>
-            </div>
-            <div class="margin_detail">
-                <a>区将改用其他快递公司发货时效：X-MOTION旗下的幻速产品将参照销售协议指定的时间内发出，自订单交易完成之后起7个工作日内发货，无法保证发货的时</a>
-            </div>
-            <div class="margin_detail">
-                <a>间均会在7个工作日内发出，最快情况下我们的商品会24小时内出库的，但受生产派单顺序及客观物流因素印象，可能会有部分延迟，需要您的耐心等待。</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>&bull;物流送货</h5>
-            </div>
-            <div class="margin_detail">
-                <a>1.X-MOTION产品只能通过专业的物流公司发货，由于各地路程远近的不同，集体的运费请向销售人员咨询。</a>
-            </div>
-            <div class="margin_detail">
-                <a>2.X-MOTION产品属于大件商品，为保证运输中的安全性，我们会搭好木架。</a>
-            </div>
-            <div class="margin_detail">
-                <a>3.目前，运费可采用全款与到付的两种方式。</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>收货地点：</h5>
-            </div>
-            <div class="margin_detail">
-                <a>物流公司会将货物送到您的收货地址。但不包含卸货、搬运等内容。需要买家提前安排人手进行卸货和搬运，若因不能卸货等问题而产生的拒收货的现象，来回</a>
-            </div>
-            <div class="margin_detail">
-                <a>运费需由买家承担。</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>上门安装：</h5>
-            </div>
-            <div class="margin_detail">
-                <a>X-MOTION产品采用标准化的工艺制作，在收货之后，按照产品说明书上的说明指导即可完成安装。</a>
-            </div>
-            <div class="margin_detail">
-                <a>如需我们提供上门安装指导的服务，请在购买时提出需求，我们会安排专业的人员为您提供上门安装服务，但需要制服各项上门服务费用，可向销售人员进行了</a>
-            </div>
-            <div class="margin_detail">
-                <a>解，上门安装服务一经确认，无法更改，如需临时变化，请支付违约金。</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>货物签收：</h5>
-            </div>
-            <div class="margin_detail">
-                <a>我们的产品都是经过检查后才发货的，商品不能完全避免在运输过程中的摩擦和碰撞现象，为了保障您的权益，签收前请知悉检查，验货时如需发现件数不对</a>
-            </div>
-            <div class="margin_detail">
-                <a>或损坏请拒收并及时与我们的客户代理联系，如买家非质量问题无理由拒签，产生的全部运费均由买家承担</a>
-            </div>
-            <div class="margin_detail margin_header">
-                <h5>售后服务：</h5>
-            </div>
-            <div class="margin_detail">
-                <a>当您购买我们的产品后，我们会为您提供一系列整套的售后服务，有任何问题，欢迎拨打我们的服务热线：0592-5022711</a>
-            </div>
-        </div>
-            <div>
-                <a>商品将根据客户的发货要求首选德邦或其他物流公司远程快运配送。</a>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;物流查询</a>
-            </div>
-            <div class="margin_detail">
-                <a>发货后，客服人员第一时间提供订单号，利于客户的货物状态查询。</a>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;签收须知</a>
-            </div>
-            <div class="margin_detail">
-                <a>为保障大家的切身利益，我们在此提醒您，收到商品时需要注意一下各项：</a>
-            </div>
-            <div class="margin_detail">
-                <a>1. 发货时，请尽量留下本人能够签收的地址与联系电话；</a>
-            </div>
-            <div class="margin_detail">
-                <a>2.收到商品是请当场验货，检查外包装是否完好，商品种类数量是否与订单明细相符；</a>
-            </div>
-            <div class="margin_detail">
-                <a>在本人不能亲自签收的情况下，请委托他人签收并严格安装第二项内容操作；</a>
-            </div>
-            <div class="margin_detail">
-                <a>如签收后商品出现质量问题，入功能性故障，请您及时联系X-MOTION客服人员处理</a>
-            </div>
-            <div class="margin_header">
-                <div>
-                    <a>免责申明</a>
-                </div>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;关于发货</a>
-            </div>
-            <div class="margin_detail">
-                <a>发货方式：由于X-MOTION属于大件商品，具有一定特殊性不能邮递或快递，只能通过专业的物流公司配送，其他小件商品默认顺丰配送，顺丰无法送达的地</a>
-            </div>
-            <div class="margin_detail">
-                <a>区将改用其他快递公司发货时效：X-MOTION旗下的幻速产品将参照销售协议指定的时间内发出，自订单交易完成之后起7个工作日内发货，无法保证发货的时</a>
-            </div>
-            <div class="margin_detail">
-                <a>间均会在7个工作日内发出，最快情况下我们的商品会24小时内出库的，但受生产派单顺序及客观物流因素印象，可能会有部分延迟，需要您的耐心等待。</a>
-            </div>
-            <div class="margin_detail">
-                <a>&bull;物流送货</a>
-            </div>
-            <div class="margin_detail">
-                <a>1.X-MOTION产品只能通过专业的物流公司发货，由于各地路程远近的不同，集体的运费请向销售人员咨询。</a>
-            </div>
-            <div class="margin_detail">
-                <a>2.X-MOTION产品属于大件商品，为保证运输中的安全性，我们会搭好木架。</a>
-            </div>
-            <div class="margin_detail">
-                <a>3.目前，运费可采用全款与到付的两种方式。</a>
-            </div>
-            <div class="margin_detail">
-                <a>收货地点：</a>
-            </div>
-            <div class="margin_detail">
-                <a>物流公司会将货物送到您的收货地址。但不包含卸货、搬运等内容。需要买家提前安排人手进行卸货和搬运，若因不能卸货等问题而产生的拒收货的现象，来回</a>
-            </div>
-            <div class="margin_detail">
-                <a>运费需由买家承担。</a>
-            </div>
-            <div class="margin_detail">
-                <a>上门安装：</a>
-            </div>
-            <div class="margin_detail">
-                <a>X-MOTION产品采用标准化的工艺制作，在收货之后，按照产品说明书上的说明指导即可完成安装。</a>
-            </div>
-            <div class="margin_detail">
-                <a>如需我们提供上门安装指导的服务，请在购买时提出需求，我们会安排专业的人员为您提供上门安装服务，但需要制服各项上门服务费用，可向销售人员进行了</a>
-            </div>
-            <div class="margin_detail">
-                <a>解，上门安装服务一经确认，无法更改，如需临时变化，请支付违约金。</a>
-            </div>
-            <div class="margin_detail">
-                <a>货物签收：</a>
-            </div>
-            <div class="margin_detail">
-                <a>我们的产品都是经过检查后才发货的，商品不能完全避免在运输过程中的摩擦和碰撞现象，为了保障您的权益，签收前请知悉检查，验货时如需发现件数不对</a>
-            </div>
-            <div class="margin_detail">
-                <a>或损坏请拒收并及时与我们的客户代理联系，如买家非质量问题无理由拒签，产生的全部运费均由买家承担</a>
-            </div>
-            <div class="margin_detail">
-                <a>售后服务：</a>
-            </div>
-            <div class="margin_detail">
-                <a>当您购买我们的产品后，我们会为您提供一系列整套的售后服务，有任何问题，欢迎拨打我们的服务热线：0592-5022711</a>
-            </div>
-        </div>
-</div>
-</div>
 {% endblock %}

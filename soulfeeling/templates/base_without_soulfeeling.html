@@ -25,14 +25,14 @@
                     <a class="nav-link " href="{% url 'groups:secondPageContent' %}" >幻速赛车</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{% url 'groups:offlineStore_onlyOnePage' %}" >线下体验店</a>
+                    <a class="nav-link " href="{% url 'groups:offlineStore' %}" >线下体验店</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="{% url 'groups:contactUs' %}" >服务</a>
                 </li>
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"  target="_blank" rel="noopener">社区</a>
+                        <a class="nav-link"  target="_blank" rel="noopener">社区</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'onlinemessages:create' %}">在线留言</a>
@@ -135,10 +135,10 @@
                         <h6>线下体验店</h6>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="{% url 'groups:offlineStore_newestStore' %}">最新门店</a>
+                                <a href="{% url 'groups:offlineStore' %}">最新门店</a>
                             </li>
                             <li>
-                                <a href="{% url 'groups:offlineStore' %}">全部门店</a>
+                                <a href="{% url 'groups:offlineStore_newestStore' %}">全部门店</a>
                             </li>
                             <li>
                                 <a href="{% url 'groups:offlineStore_policy' %}">优惠政策</a>
