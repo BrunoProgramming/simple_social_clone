@@ -18,7 +18,7 @@
     display: block;
 }
 
-#offline-allStores, #offline-Activity, #offline-newStores{
+ #offline-all,#offline-allStores, #offline-Activity, #offline-newStores{
     width: 100%;
     padding-left:9%;
     padding-bottom: 3%;

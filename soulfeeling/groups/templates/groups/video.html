@@ -1,0 +1,13 @@
+{% extends "base_without_soulfeeling.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link rel="stylesheet" href="{% static "css/video.css" %}">
+{% endblock %}
+
+{% block content %}
+	<div>
+        <video controls autoplay loop>
+            <source src="{% static "video/1.mp4" %}" type="video/mp4"> </source>
+        </video>
+    </div>
+{% endblock %}

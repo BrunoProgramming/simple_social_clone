@@ -76,6 +76,8 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
 class contactUsPage(TemplateView):
     template_name = 'groups/contactUs.html'
 
+class VideoPage(TemplateView):
+    template_name = 'groups/video.html'
 
 class feedBackPage(TemplateView):
     template_name = 'groups/feedBack.html'
