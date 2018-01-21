@@ -14,6 +14,10 @@ from django.views.generic import TemplateView
 
 from braces.views import SelectRelatedMixin
 
+from . import forms
+
+from django.contrib.auth.decorators import login_required
+
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ("name", "description")
     model = Group
@@ -116,15 +120,6 @@ class offlineStorePage(TemplateView):
 class joinPage(TemplateView):
     template_name = 'groups/join.html'
 
-
-
-#class onlineMessagePage(generic.ListView):
-#    template_name = 'groups/onlineMessage.html'
-#    model = SuggestMessage
-    
-
-
-
 class productContentPage(TemplateView):
     template_name = 'groups/productContent.html'
 
@@ -134,3 +129,43 @@ class secondPageContentPage(TemplateView):
 
 class newsInformationPage(TemplateView):
     template_name = 'groups/newsInformation.html'
+
+
+from django.forms import modelform_factory
+
+@login_required
+def post(request):
+
+    ImageFormSet = modelformset_factory(Images,
+                                        form=ImageForm, extra=3)
+
+    if request.method == 'POST':
+
+        postForm = PostForm(request.POST)
+        formset = ImageFormSet(request.POST, request.FILES,
+                               queryset=Images.objects.none())
+
+
+        if postForm.is_valid() and formset.is_valid():
+
+
+
+            post_form = postForm.save(commit=False)
+            post_form.user = request.user
+            post_form.save()
+
+            for form in formset.cleaned_data:
+                image = form['image']
+                photo = Images(post=post_form, image=image)
+                photo.save()
+            messages.success(request,
+                             "Yeeew,check it out on the home page!")
+            return HttpResponseRedirect("/")
+        else:
+            print(postForm.errors, formset.errors)
+    else:
+        postForm = PostForm()
+        formset = ImageFormSet(queryset=Images.objects.none())
+    return render(request, 'index.html',
+                  {'postForm': postForm, 'formset': formset},
+                  context_instance=RequestContext(request))

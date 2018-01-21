@@ -50,24 +50,32 @@ class GroupMember(models.Model):
         unique_together = ("group", "user")
 
 
-class NewTopic(models.Model):
-    name = models.CharField(max_length=255, unique=True)
-    slug = models.SlugField(allow_unicode=True, unique=True)
-    description = models.TextField(blank=True, default='')
-    description_html = models.TextField(editable=False, default='', blank=True)
+
+class Post(models.Model):
+    title = models.CharField(max_length=128)
+    body = models.CharField(max_length=400)
+    body_html = models.TextField(editable=False)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        self.description_html = misaka.html(self.description)
+        self.slug = slugify(self.title)
+        self.body_html = misaka.html(self.body)
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse("groups:single", kwargs={"slug": self.slug})
-
+        return reverse("groups:singlePost", kwargs={"slug": self.slug})
 
     class Meta:
-        ordering = ["name"]
+        ordering = ["title"]
 
+def get_image_filename(instance, filename):
+        title = instance.post.title
+        slug = slugify(title)
+        return "post_images/%s-%s" % (slug, filename)  
+
+class Images(models.Model):
+    post = models.ForeignKey(Post, default=None)
+    image = models.ImageField(upload_to=get_image_filename,
+                              verbose_name='Image', )
