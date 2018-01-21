@@ -52,7 +52,7 @@
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Twitter">
+                        <a class="nav-link p-2" href="{% url 'groups:join' %}" target="_blank" rel="noopener" aria-label="Twitter">
                             加盟体验店
                         </a>
                     </li>

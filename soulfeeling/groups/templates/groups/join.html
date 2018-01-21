@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block customeCSSContent %}
+<link rel="stylesheet" href="{% static "css/join.css" %}">
+{% endblock %}
+
+{% block content %}
+
+    <div id="banner" style="background-image:url({% static "image/Join/banner.png" %})">
+        <div id="bannerDesc">
+            <h1>
+                幻速<strong>SOULFEELING</strong>赛车体验店
+                <br />
+                全国唯一模拟竞速加盟品牌
+            </h1>
+        </div>
+    </div>
+
+    <div id="menu">
+        <div id="menuList">
+            <ul>
+                <li class="li-style"><a href="#banner"><strong>幻速体验店</strong></a></li>
+                <li class="list li-style"><a href="#menu"><strong>竞速主题式经营</strong></a></li>
+                <li class="list li-style"><a href="#imitate"><strong>200亿模拟赛车市场</strong></a></li>
+                <li class="list li-style"><a href="#activity"><strong>高端活动</strong></a></li>
+                <li class="list li-style"><a href="#businesspattern"><strong>经营方式</strong></a></li>
+                <li class="list li-style"><a href="#calculate"><strong>投资回报计算器</strong></a></li>
+                <li class="list li-style"><a href="#advantage"><strong>加盟优势</strong></a></li>
+                <li class="list li-style"><a href="#flow"><strong>加盟流程</strong></a></li>
+                <li class="list li-style"><a href="#cooperation"><strong>合作品牌</strong></a></li>
+                <li class="list li-style"><a href="#offStore"><strong>全国线下加盟体验店</strong></a></li>
+                <li class="li-style"><a><strong>咨询留言</strong></a></li>
+            </ul>
+        </div>
+        <div id="menu_right">
+            <h1><strong>竞速主题式经营</strong></h1>
+            <h3 class="menu_right_Note"><strong>多种场景加盟方式</strong></h3>
+            <table class="menu_right_Details">
+                <tr>
+                    <td>
+                        <div>
+                            <img src="{% static "image/Join/menu_right_1.png" %}"/>
+                            <div class="menu_right_desc">
+                                <h3 class="oneLine"><strong>24</strong></h3>
+                                <h5 class="oneLine"><strong>h无人值守</strong></h5>
+                            </div>
+                            <hr class="menu_right_hr" size="50"/>
+                            <div class="menu_right_font_color">
+                                <h5>点位式经营</h5>
+                                <h5>自助付费体验</h5>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="{% static "image/Join/menu_right_2.png" %}"/>
+                        <div class="menu_right_desc">
+                            <h3 class="oneLine"><strong>主题馆 / 旗舰馆</strong></h3>
+                        </div>
+                        <hr class="menu_right_hr" size="50" />
+                        <div class="menu_right_font_color">
+                            <h5>活跃用户聚集地</h5>
+                            <h5>配套休闲餐饮等综合服务</h5>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="{% static "image/Join/menu_right_3.png" %}"/>
+                        <div class="menu_right_desc">
+                            <h3 class="oneLine"><strong>经销代理</strong></h3>
+                        </div>
+                        <hr class="menu_right_hr" size="50" />
+                        <div class="menu_right_font_color">
+                            <h5>寻找更多创业合作伙伴</h5>
+                            <h5>各地域独家代理</h5>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="imitate">
+        <img src="{% static "image/Join/3.png" %}" class="chartImg"/>
+    </div>
+
+    <div id="activity">
+        <h1><strong>现身高端活动，知名车手亲体验</strong></h1>
+    </div>
+    <div>
+        <img src="{% static "image/Join/4.png" %}" class="activityImg" />
+    </div>
+
+    <div id="businesspattern">
+        <img src="{% static "image/Join/5.png" %}" class="businesspatternImg" />
+    </div>
+
+    <div>
+        <div id="calculate">
+            <h1><strong>投资回报计算器</strong></h1>
+        </div>
+        <div id="calculateNote">
+            <h2>请填写一下数值，以保证计算结果的准确率</h2>
+        </div>
+        <table id="tableStyle" align="center">
+            <tr>
+                <td><h2>预计购置台数</h2></td>
+                <td><h2><input id="count" type="text" /></h2></td>
+                <td class="specialTd"><h2>台</h2></td>
+            </tr>
+            <tr>
+                <td><h2>预计场地及装修成本</h2></td>
+                <td><h2><input id="venueCost" type="text" /></h2></td>
+                <td><h2>万元/年</h2></td>
+            </tr>
+            <tr>
+                <td><h2>预计人工成本</h2></td>
+                <td><h2><input id="labourCost" type="text" /></h2></td>
+                <td><h2>万元/年</h2></td>
+            </tr>
+            <tr>
+                <td><h2>预计线下销售成本</h2></td>
+                <td><h2><input id="saleCost" type="text" /></h2></td>
+                <td><h2>万元/年</h2></td>
+            </tr>
+        </table>
+        <div id="sendStyle">
+            <h2>
+                <input id="Text1" type="text" placeholder="结果发送至您手机"/>
+                <input id="send" type="button" value="确定" />
+            </h2>
+        </div>
+        <div id="note">
+            <h6><strong>*此结果仅供参考，如有疑问欢迎咨询客服！</strong></h6>
+        </div>
+    </div>    
+
+    <div id="advantage">
+        <img src="{% static "image/Join/6.png" class="advantageImg" />
+    </div>
+
+    <div id="support">
+        <img src="{% static "image/Join/support.png" class="advantageImg" />
+    </div>
+
+    <div id="flow">
+        <img src="{% static "image/Join/flow.png" class="advantageImg" />
+    </div>
+
+    <div id="cooperation">
+        <h1><strong>合作品牌</strong></h1>
+    </div>
+    <div id="cooperationImgDiv">
+        <img src="{% static "image/Join/cooperation.png" class="cooperationImg" />
+    </div>
+
+    <div id="offStore">
+        <h1><strong>全国线下加盟体验店</strong></h1>
+    </div>
+    <div>
+        <img src="{% static "image/Join/allstore.png" class="allstoreImg" />
+    </div>
+
+    <div id="message">
+        <h1><strong>咨询留言</strong></h1>
+        <h4 class="grayfont"><strong>请填写以下信息，我们将安排专业的客服与您联系</strong></h4>
+        <table align="center" id="message">
+            <tr class="messagetr">
+                <td>
+                    <div class="formtd">
+                        <h4 class="star">
+                            <strong>*</strong>
+                        </h4>
+                        <h4 class="starInfo">
+                            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名&nbsp:</strong>
+                        </h4>
+                    </div>
+                </td>
+                <td><h4><input id="name" type="text" placeholder="请输入您的姓名" /></h4></td>
+            </tr>
+            <tr class="messagetr">
+                <td>
+                    <div class="formtd">
+                        <h4 class="star">
+                            <strong>*</strong>
+                        </h4>
+                        <h4 class="starInfo">
+                            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话&nbsp:</strong>
+                        </h4>
+                    </div>
+                </td>
+                <td>
+                    <h4>
+                        <input id="phone" type="text" class="formTxtBox" placeholder="请输入您的真实电话" />
+                    </h4>
+                </td>
+            </tr>
+            <tr class="messagetr">
+                <td>
+                    <div class="formtd">
+                        <h4>
+                            <strong>&nbsp&nbsp&nbsp意&nbsp&nbsp&nbsp&nbsp向&nbsp&nbsp&nbsp&nbsp方&nbsp&nbsp&nbsp&nbsp式&nbsp:</strong>
+                        </h4>
+                    </div>
+                </td>
+                <td>
+                    <h4>
+                        <input id="phone" type="text" class="formTxtBox" placeholder="请输入合作意向" />
+                    </h4>
+                </td>
+            </tr>
+            <tr class="messagetr">
+                <td>
+                    <div class="formtd">
+                        <h4>
+                            <strong>&nbsp&nbsp&nbsp所&nbsp&nbsp&nbsp&nbsp在&nbsp&nbsp&nbsp&nbsp城&nbsp&nbsp&nbsp&nbsp市&nbsp:</strong>
+                        </h4>
+                    </div>
+                </td>
+                <td>
+                    <h4>
+                        <input id="phone" type="text" class="formTxtBox" placeholder="请输入您所在的城市" />
+                    </h4>
+                </td>
+            </tr>
+            <tr class="messagetr">
+                <td>
+                    <div class="formtd">
+                        <h4 class="star">
+                            <strong>*</strong>
+                        </h4>
+                        <h4 class="starInfo">
+                            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp留&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp言&nbsp:</strong>
+                        </h4>
+                    </div>
+                </td>
+                <td>
+                    <h4>
+                        <textarea class="formTxtBox" placeholder="您有什么想告诉我们的" rows="5"></textarea>
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        <div class="boldTxt">
+            <h4><input id="confirm" type="button" value="确定" /></h4>
+        </div>
+    </div>
+	
+{% endblock %}

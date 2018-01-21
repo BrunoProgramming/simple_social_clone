@@ -113,6 +113,9 @@ class offlineStore_policyPage(TemplateView):
 class offlineStorePage(TemplateView):
     template_name = 'groups/offlineStore.html'
 
+class joinPage(TemplateView):
+    template_name = 'groups/join.html'
+
 
 #class onlineMessagePage(generic.ListView):
 #    template_name = 'groups/onlineMessage.html'

@@ -1,0 +1,180 @@
+﻿#banner{
+    display:block;
+    width:100%;
+    text-align:center;
+    vertical-align:central;
+    background-size:100% 100%;
+    height:100%;
+    color:white;
+}
+
+#bannerDesc{
+    top:48%;
+    left:38%;
+    position:absolute;
+}
+
+.chartImg, .activityImg,
+.businesspatternImg, .advantageImg,
+ .cooperationImg, .allstoreImg{
+    display:block;
+    width:100%;
+}
+
+#activity, #cooperation, #offStore{
+    text-align:center;
+    margin-top:3%;
+    margin-bottom:3%;
+}
+
+#menu{
+    margin-left:5%;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.list{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.li-style{
+    list-style-type:none; 
+}
+
+.li-style > li > a {
+    color: #333;
+    border-left: 1px solid transparent;
+  }
+
+.li-style > li > a:hover,
+.li-style > li > a:focus,
+.li-style > .active > a,
+.li-style > .active > a:hover,
+.li-style > .active > a:focus{
+    border-left: 1px solid #439348;
+}
+
+#menuList{
+    float:left;
+    width:15%;
+}
+
+#menu_right{
+    text-align:center;
+    width:100%;
+}
+
+.menu_right_Note{
+    color:dimgray;
+}
+
+.menu_right_Details{
+    width:70%;
+}
+
+.oneLine{
+    display:inline;
+}
+
+.menu_right_desc{
+    margin-top:10px;
+}
+
+.menu_right_hr{
+    width:8%;
+    border-color:dimgray;
+}
+
+.menu_right_font_color{
+    color:dimgray;
+}
+
+#cooperationImgDiv{
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#calculate{
+    text-align:center;
+    margin-top:3%;
+}
+
+#calculateNote{
+    color:dimgray;
+    margin-top:10px;
+    margin-bottom:1%;
+    text-align:center;
+}
+
+#tableStyle{
+    text-align:right;
+}
+
+.specialTd{
+    text-align:left;
+}
+
+#sendStyle{
+    text-align:center;
+    margin-top:2%;
+}
+
+#send{
+    background-color:#6ec0ff;
+    border:none;
+}
+
+#note{
+    margin-top:3%;
+    margin-bottom:3%;
+    color:dimgray;
+    text-align:center;
+}
+
+#message{
+    margin-top:2%;
+    text-align:center;
+}
+
+.grayfont{
+    color:dimgray
+}
+
+.formtd{
+    display:inline;
+    margin-top:0px;
+}
+
+.star{
+    color:red;
+    display:inline;
+}
+
+.starInfo{
+    display:inline;
+}
+
+#name, #phone, .formTxtBox{
+    background-color:#f5f5f5;
+    border:none;
+}
+
+#confirm{
+    border:0;
+    margin-top: 1%;
+    width:100px;
+    height:50px;
+    background-color:#6ec0ff;
+}
+
+.boldTxt{
+    font-size:x-large;
+}
+
+.messagetr{
+    margin-top:5%;
+    margin-bottom:5%;
+    display:block;
+    background-color:#f5f5f5;
+}
