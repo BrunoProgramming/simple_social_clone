@@ -58,8 +58,32 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Twitter">
-                            <img src="{% static "img/search.png" %}">
+                            <input id="searchText" type="text" placeholder="新闻标题" style="display:none" />
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Twitter">
+                            <img id="searchButton" src="{% static "img/search.png" %}">
+                        </a>
+                        <script type="text/javascript">
+                            $("#searchButton").click(function (e) {
+                                var ele = document.getElementById("searchText");
+
+                                if (ele.style.display == "block")
+                                {
+                                    var title = "幻速荣获亚洲VR博览会年度VR技术创新奖";
+                                    var titleValue = $(searchText).val();
+                                    if(title.includes(titleValue))
+                                    {
+                                        $(location).attr('href', "{% url 'groups:newsInformation' %}")
+                                    }
+                                }
+                                else
+                                {
+                                    ele.style.display = 'block';
+                                }
+                            });
+                        </script>
                     </li>
                 {% else %}
                     <li class="nav-item">
