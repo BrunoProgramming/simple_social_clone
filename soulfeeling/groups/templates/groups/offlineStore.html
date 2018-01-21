@@ -2,7 +2,14 @@
 {% load staticfiles %}
 {% block customeCSSContent %}
 <link rel="stylesheet" href="{% static "css/offlineStore.css" %}">
+
 <script src="{% static "js/offlineStore.js" %}"></script>
+
+<script src="{% static "js/common.js" %}"></script>
+<script src="{% static "js/cityJson.js" %}"></script>
+<script src="{% static "js/citySet.js" %}"></script>
+<link rel="stylesheet" href="{% static "css/city.css" %}">
+
 {% endblock %}
 
 {% block content %}
@@ -32,18 +39,24 @@
 
 <div id="offlineStoreFirst">
     <div id="offline-allStores">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button"
-                    id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                省份／直辖市／行政区
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div> 
+
+        <div id="ui_content">
+            <span>地址:</span><span id="city" style="color:#d7d7d7;padding-left:5px;">省份／直辖市／行政区</span>
         </div>
+        <div id="popCity" style="display: none;" class="_citys"><span title="关闭" id="cColse">×</span><ul id="_citysheng" class="_citys0"><li class="citySel" id="sheng">省份</li><li id="shi">城市</li><li id="xian">区县</li></ul><div id="_citys0" class="_citys1"></div><div style="display:none" id="_citys1" class="_citys1"></div><div style="display:none" id="_citys2" class="_citys1"></div></div>
+        <script type="text/javascript">
+            $("#city").click(function (e) {
+                var ele = document.getElementById("popCity");
+                ele.style.display = 'block';
+                SelCity(this,e);
+                console.log(this);
+            });
+            $("#cColse").click(function (e) {
+                var ele = document.getElementById("popCity");
+                ele.style.display = 'none';
+                console.log(this);
+            });
+        </script>
         <div>
             <table cellpadding="10px">
                 <tr>
@@ -340,18 +353,23 @@
 </div>
 <div id="offlineStoreThird">
         <div id="offline-allStores">
-                <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                         id="dropdownMenuButton" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          省份／直辖市／行政区
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </div>
+            <div id="ui_content">
+                <span>地址:</span><span id="city" style="color:#d7d7d7;padding-left:5px;">省份／直辖市／行政区</span>
+            </div>
+            <div id="popCity" style="display: none;" class="_citys"><span title="关闭" id="cColse">×</span><ul id="_citysheng" class="_citys0"><li class="citySel" id="sheng">省份</li><li id="shi">城市</li><li id="xian">区县</li></ul><div id="_citys0" class="_citys1"></div><div style="display:none" id="_citys1" class="_citys1"></div><div style="display:none" id="_citys2" class="_citys1"></div></div>
+            <script type="text/javascript">
+                $("#city").click(function (e) {
+                    var ele = document.getElementById("popCity");
+                    ele.style.display = 'block';
+                    SelCity(this,e);
+                    console.log(this);
+                });
+                $("#cColse").click(function (e) {
+                    var ele = document.getElementById("popCity");
+                    ele.style.display = 'none';
+                    console.log(this);
+                });
+            </script>
             <img src="{% static "img/全部门店.png" %}" id="allStoresImg">
             </div>
 </div>
@@ -548,5 +566,4 @@
                 </div>
                 </div>
 </div>
-
 {% endblock %}

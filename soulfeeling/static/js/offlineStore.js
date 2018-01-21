@@ -1,3 +1,4 @@
+
 function changeNewStore(imgName)
 {
     document.getElementById("offlineStoreFirst").style.display = "none";

@@ -49,3 +49,25 @@ class GroupMember(models.Model):
     class Meta:
         unique_together = ("group", "user")
 
+
+class NewTopic(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    slug = models.SlugField(allow_unicode=True, unique=True)
+    description = models.TextField(blank=True, default='')
+    description_html = models.TextField(editable=False, default='', blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        self.description_html = misaka.html(self.description)
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse("groups:single", kwargs={"slug": self.slug})
+
+
+    class Meta:
+        ordering = ["name"]
+

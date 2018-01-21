@@ -117,6 +117,7 @@ class joinPage(TemplateView):
     template_name = 'groups/join.html'
 
 
+
 #class onlineMessagePage(generic.ListView):
 #    template_name = 'groups/onlineMessage.html'
 #    model = SuggestMessage
