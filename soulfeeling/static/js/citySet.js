@@ -78,10 +78,21 @@ function SelCity(obj,e) {
                 }
                 var bc = $("#hcity").val();
                 var bp = $("#hproper").val();
+                var barea = $("#harea").val();
                 /*ths.value = bc + "-" + bp + "-" + $(this).data("name");*/
                 $("#city").html(bc + "-" + bp + "-" + $(this).data("name")).css("color","#333");
                 var ele = document.getElementById("popCity");
                 ele.style.display = 'none';
+                if(bp == "厦门市" && barea == "湖里区")
+                {
+                    var tableStore = document.getElementById("store-table-visible");
+                    tableStore.style.display = 'block';
+                }
+                else
+                {
+                    var tableStore = document.getElementById("store-table-visible");
+                    tableStore.style.display = 'none';
+                }
             });
 
         });
