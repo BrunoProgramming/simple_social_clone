@@ -7,17 +7,19 @@
 {% block content %}
 
 <div id="offline-nav">
-        <h4>新闻中心</h4>
+        <h2>新闻中心</h2>
         <div>
+            <h4>
             <a href="#">首页</a>
             <a>/</a>
             <a>新闻中心</a>
+            </h4>
         </div>
 </div>
 
-    <div class="container" id="offline-allStores">
-        <div class="row" id="row-allStores">
-            <div class="col-8">
+    <div class="newsBody" id="offline-allStores">
+            <div id="row-allStores">
+                <div class="text">
                 <h3>幻速荣获亚洲VR博览会年度VR技术创新奖</h3>
                 <a>时间：2015-03-04 来源：本站原创 作者：陈树臻</a>
                 <hr class="line"/>
@@ -63,39 +65,41 @@
                 </div>
             </div>
             </div>
-            <div class="col-4">
-                <div class="row textStyle">
-                    <a><h4>|推荐阅读</h4></a>
+            <div class="right">
+                    <div class="textStyle">
+                        <h4><a>|推荐阅读</a></h4>
                 </div>
-                <div class="row">
+                <div>
                     <img class="list-image" src="{% static "img/1.png" %}">
-                    <a href="#">XMOTION全智能健身新品，亮相2017体博会</a>
-                    <a>2017-03-04</a>
+                    <h5><a href="#">XMOTION全智能健身新品，亮相2017体博会</a></h5>
+                    <h5><a>2017-03-04</a></h5>
                 </div>
-                <div class="row">
+                <div>
                     <img class="list-image" src="{% static "img/2.png" %}">
-                    <a href="#">国内首度公开亮相 多种神技能引围观</a>
+                    <h5><a href="#">国内首度公开亮相 多种神技能引围观</a></h5>
                 </div>
-                <div class="row">
+                <div>
                     <img class="list-image" src="{% static "img/2.png" %}">
-                    <a href="#">幻速赛车模拟器，驾驶体验真实逼真，悬挂式支架，完美还原真实驾驶体验</a>
-                    <a>2017-03-04</a>
+                    <h5><a href="#">幻速赛车模拟器，驾驶体验真实逼真，悬挂式支架，完美还原真实驾驶体验</a></h5>
+                    <h5><a>2017-03-04</a></h5>
                 </div>
-                <div class="row textStyle weixin">
-                    <a><h4>|微信订阅</h4></a>
+                <div class="textStyle weixin">
+                        <h4><a>|微信订阅</a></h4>
                 </div>
                 <div>
                     <div class="weixinIcon">
                         <img src="{% static "img/订阅.png" %}" />
                     </div>
                     <div class="weixinDesc">
+                        <strong>
                         幻速赛车竞技平台
                         <br/>
                         soulfeeling2016
+                        </strong>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <div class="clear"></div>
 
 {% endblock %}

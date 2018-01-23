@@ -24,7 +24,7 @@
 
 .formLine{
     margin-top:1vh;
-    background-color:lightgray;
+    background-color:#f5f5f5;
     margin-left:37%;
     margin-right:37%;
     padding-top:0;
@@ -38,7 +38,7 @@
 .formTxtBox{
     display:inline;
     margin-left:1%;
-    background-color:lightgray;
+    background-color:#f5f5f5;
     border:0;
 }
 
@@ -69,22 +69,15 @@
     border:0;
     margin-top: 3%;
     width:100px;
-    background-color:cornflowerblue
-}
-
-.header{
-    font-size:xx-large;
-    font-weight:bolder;
+    background-color:#6ec0ff;
+	width:100px;
+    height:50px;
 }
 
 .title{
     position:absolute;
     width:100%;
-    padding-left:30%;
+    padding-left:13%;
     padding-top:10%;
     color:dimgray
-}
-
-.title2{
-    font-size:larger
 }

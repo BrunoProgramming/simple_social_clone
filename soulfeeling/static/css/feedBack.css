@@ -56,21 +56,12 @@
     margin-right:13%
 }
 
-.header{
-    font-size:xx-large;
-    font-weight:bolder;
-}
-
 .title{
     position:absolute;
     width:100%;
-    padding-left:30%;
+    padding-left:13%;
     padding-top:10%;
     color:dimgray
-}
-
-.title2{
-    font-size:larger
 }
 
 .margin_detail{

@@ -119,8 +119,29 @@
     width:100%;
     margin-right:0;
     display:block;
+
+}.text{
+    float:left;
+    width:65%;
+    margin-right:5%;
+}
+
+.right{
+    width:30%;
+    float:left;
+}
+
+.newsBody{
+    width:100%;
+    padding-left:10%;
+    padding-right:5%;
+}
+
+.clear{
+    clear:both;
 }
 
 .txtStyle{
     color:dimgray;
 }
+
